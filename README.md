@@ -1,5 +1,12 @@
 # Thai-Sentence-Vector-Benchmark
-Benchmark for Thai sentence representation on Thai STS-B
+Benchmark for Thai sentence representation on Thai STS-B.
+
+# Motivation
+Sentence representations play a crucial role in NLP downstream tasks such as NLI, text classification, and STS.
+Recent techniques for train sentence representations require NLI or STS datasets. 
+However, Thai NLI or STS datasets are not available to train a sentence representation.
+To address this problem, we train a sentence representation with an unsupervised technique call SimCSE.
+We can train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the google collab (V100).
 
 # How do we train unsupervised sentence representation?
 - We use [SimCSE:Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) and training models with multilingual LM models (mBERT, distil-mBERT, XLM-R) 
