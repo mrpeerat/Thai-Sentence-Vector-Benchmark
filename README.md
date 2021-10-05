@@ -31,4 +31,4 @@ Benchmark for Thai sentence representation on Thai STS-B
 - Evaluation: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb
 - Training Example: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb
 
-You can pull requests with a result to show your results in the benchmark table!!!!.
+You can pull requests with results to show your model in the benchmark table!!!!.
