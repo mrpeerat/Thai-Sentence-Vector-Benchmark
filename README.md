@@ -6,26 +6,26 @@ Sentence representations play a crucial role in NLP downstream tasks such as NLI
 Recent techniques for train sentence representations require NLI or STS datasets. 
 However, Thai NLI or STS datasets are not available to train a sentence representation.
 To address this problem, we train a sentence representation with an unsupervised technique call SimCSE.
-We train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the google colab (V100) where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
+We train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on Google Colab (V100) where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
 
-Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of a representation's performance on Thai STS-B.
+Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of the sentence representations’ performance on Thai STS-B (translated version of [STS-B](https://github.com/facebookresearch/SentEval)).
 
 # How do we train unsupervised sentence representation?
-- We use [SimCSE:Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) and training models with multilingual LM models (mBERT, distil-mBERT, XLM-R) 
+- We use [SimCSE:Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) on multilingual LM models (mBERT, distil-mBERT, XLM-R) 
 - Training data: [Thai Wikipedia](https://github.com/PyThaiNLP/ThaiWiki-clean/releases/tag/20210620?fbclid=IwAR2_CtHJ_6od9z5-0hsolwcNYJH03e5qk_XXkoxDpOQivmo8QreYFQS3JuQ)
 - Example: [SimCSE-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb)
 
 # Why SimCSE?
 - Easy to train
-- Work with every model
-- Not require any label datasets
-- The performance of XLM-R (unsupervised) and m-Distil-BERT (train on > 1B sentences) is similar (<1% correlation)
+- Compatible with every model
+- Does not require any annotated dataset
+- The performance of XLM-R (unsupervised) and m-Distil-BERT (train on > 1B sentences) are similar (<1% correlation)
 
-# How to train supervised?
+# What’s about Supervised Learning?
 - We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers), which you can train with NLI, STS, triplet, contrastive, etc.
 
 # Benchmark
-- We use [STS-B translation ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
+- We use [STS-B translated ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
 - How to evaluate sentence representation: [SentEval.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb) 
 
 | Base Model  | Spearman's Correlation (*100) | Supervised? |
@@ -40,8 +40,12 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Evaluation: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb
 - Training Example: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb
 
-You can pull requests with results to show your model in the benchmark table!!!!.
+You can submit a pull request to show your model’s result in the benchmark table!!!!.
 
 # Thank you many codes from
 - [Sentence-transformer (Sentence-BERT)](https://github.com/UKPLab/sentence-transformers)
 - [SimCSE github](https://github.com/princeton-nlp/SimCSE)
+
+# Acknowledgement 
+- Can
+- Charin
