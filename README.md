@@ -46,5 +46,5 @@ You can submit a pull request to show your model’s result in the benchmark tab
 - [SimCSE github](https://github.com/princeton-nlp/SimCSE)
 
 Acknowledgment:
-Can - proofread
-Charin - proofread + idea
+- Can: proofread
+- Charin: proofread + idea
