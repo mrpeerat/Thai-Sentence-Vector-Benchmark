@@ -12,6 +12,9 @@ Benchmark for Thai sentence representation on Thai STS-B
 - No need label datasets
 - The performance of XLM-R (unsupervised) and m-Distil-BERT (train on > 500M sentences) is similar (<1% correlation)
 
+# How to train supervised?
+- We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers) which you can train with NLI, STS, triplet, contrastive, etc.
+
 # Benchmark
 - We use [STS-B translation ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
 - How to evaluate sentence representation: [SentEval.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb) 
