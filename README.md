@@ -5,7 +5,7 @@ Benchmark for Thai sentence representation on Thai STS-B.
 Sentence representation plays a crucial role in NLP downstream tasks such as NLI, text classification, and STS. Recent sentence representation training techniques require NLI or STS datasets.  However, there are no equivalent Thai NLI or STS datasets for sentence representation training.
 To address this problem, we train a sentence representation model with an unsupervised technique called SimCSE.
 
-We show that it is possible to train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the google colab (V100) where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
+We show that it is possible to train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the Google Colab (V100) where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
 
 Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of the sentence representations’ performance on Thai STS-B (translated version of [STS-B](https://github.com/facebookresearch/SentEval)).
 
@@ -20,8 +20,8 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Does not require any annotated dataset
 - The performance of XLM-R (unsupervised) and m-Distil-BERT (trained on > 1B sentences) are similar (1% difference in correlation)
 
-# What’s about Supervised Learning?
-- We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers), which you can train with NLI, STS, triplet, contrastive, etc.
+# What about Supervised Learning?
+- We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers), which you can train with NLI, STS, triplet loss, contrastive loss, etc.
 
 # Benchmark
 - We use [STS-B translated ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
@@ -45,6 +45,6 @@ You can submit a pull request to show your model’s result in the benchmark tab
 - [Sentence-transformer (Sentence-BERT)](https://github.com/UKPLab/sentence-transformers)
 - [SimCSE github](https://github.com/princeton-nlp/SimCSE)
 
-Acknowledgment:
+Acknowledgments:
 - Can: proofread
 - Charin: proofread + idea
