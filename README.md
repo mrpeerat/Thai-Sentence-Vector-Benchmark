@@ -6,7 +6,7 @@ Sentence representations play a crucial role in NLP downstream tasks such as NLI
 Recent techniques for train sentence representations require NLI or STS datasets. 
 However, Thai NLI or STS datasets are not available to train a sentence representation.
 To address this problem, we train a sentence representation with an unsupervised technique call SimCSE.
-We can train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the google collab (V100) where the performance of SimCSE-XLM-R is similar to mDistil-BERT<-mUSE (train on > 1B sentences).
+We can train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the google collab (V100) where the performance of SimCSE-XLM-R is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
 
 Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of a representation's performance on Thai STS-B.
 
