@@ -8,6 +8,8 @@ However, Thai NLI or STS datasets are not available to train a sentence represen
 To address this problem, we train a sentence representation with an unsupervised technique call SimCSE.
 We can train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the google collab (V100).
 
+Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of a representation's performance on Thai STS-B.
+
 # How do we train unsupervised sentence representation?
 - We use [SimCSE:Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) and training models with multilingual LM models (mBERT, distil-mBERT, XLM-R) 
 - Training data: [Thai Wikipedia](https://github.com/PyThaiNLP/ThaiWiki-clean/releases/tag/20210620?fbclid=IwAR2_CtHJ_6od9z5-0hsolwcNYJH03e5qk_XXkoxDpOQivmo8QreYFQS3JuQ)
