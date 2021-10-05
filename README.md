@@ -28,7 +28,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - We use [STS-B translation ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
 - How to evaluate sentence representation: [SentEval.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb) 
 
-| Base Model  | Spearman' Cor (*100) | Supervised? |
+| Base Model  | Spearman's Correlation (*100) | Supervised? |
 | ------------- | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | 38.84  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | 39.26  | 
