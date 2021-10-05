@@ -41,3 +41,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Training Example: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb
 
 You can pull requests with results to show your model in the benchmark table!!!!.
+
+# Thank you many codes from
+- [Sentence-transformer (Sentence-BERT)](https://github.com/UKPLab/sentence-transformers)
+- [SimCSE github](https://github.com/princeton-nlp/SimCSE)
