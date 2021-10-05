@@ -10,7 +10,7 @@ Benchmark for Thai sentence representation on Thai STS-B
 - Easy to train
 - Work with every model
 - No need label datasets
-- The performance of XLM-R (unsupervised) and m-Distil-BERT (train on > 500M sentences) is similar (<1% correlation)
+- The performance of XLM-R (unsupervised) and m-Distil-BERT (train on > 1B sentences) is similar (<1% correlation)
 
 # How to train supervised?
 - We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers) which you can train with NLI, STS, triplet, contrastive, etc.
