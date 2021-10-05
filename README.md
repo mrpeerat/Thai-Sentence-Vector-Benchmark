@@ -18,7 +18,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Easy to train
 - Compatible with every model
 - Does not require any annotated dataset
-- The performance of XLM-R (unsupervised) and m-Distil-BERT (train on > 1B sentences) are similar (<1% correlation)
+- The performance of XLM-R (unsupervised) and m-Distil-BERT (trained on > 1B sentences) are similar (1% difference in correlation)
 
 # What’s about Supervised Learning?
 - We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers), which you can train with NLI, STS, triplet, contrastive, etc.
