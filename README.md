@@ -48,3 +48,5 @@ You can submit a pull request to show your model’s result in the benchmark tab
 Acknowledgments:
 - Can: proofread
 - Charin: proofread + idea
+
+![1_3JJRwT1f2zTK1hx36-qXdg (1)](https://user-images.githubusercontent.com/21156980/139905794-5ce1389f-63e4-4da0-83b8-5b1aa3983222.jpeg)
