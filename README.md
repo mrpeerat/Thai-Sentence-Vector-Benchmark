@@ -39,6 +39,8 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 # Thai text classification benchmark
 Coming Soon.
 
+# Thai probing tasks benchmark
+Coming Soon.
 
 # Thank you many codes from
 - [Sentence-transformer (Sentence-BERT)](https://github.com/UKPLab/sentence-transformers)
