@@ -39,7 +39,6 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 # Thai text classification benchmark
 Coming Soon.
 
-You can submit a pull request to show your model’s result in the benchmark table!!!!.
 
 # Thank you many codes from
 - [Sentence-transformer (Sentence-BERT)](https://github.com/UKPLab/sentence-transformers)
