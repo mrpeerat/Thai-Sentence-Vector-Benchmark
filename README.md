@@ -36,7 +36,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 63.50  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 80.11  | :heavy_check_mark:
 
-# Thai text classification benchmark
+# Thai transfer task benchmark
 Coming Soon.
 
 
