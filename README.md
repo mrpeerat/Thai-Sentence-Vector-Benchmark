@@ -42,7 +42,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - How to evaluate: [Transfer_Evaluation]()
 
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
-| ------------- | :-------------: | :-------------: |
+| ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  | 
