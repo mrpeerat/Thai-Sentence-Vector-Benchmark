@@ -24,7 +24,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers), which you can train with NLI, STS, triplet loss, contrastive loss, etc.
 
 # Multilingual Representation?
-- CL-ReLKT: https://github.com/mrpeerat/CL-ReLKT
+- My new work => CL-ReLKT: https://github.com/mrpeerat/CL-ReLKT (NAACL'22)
 
 # Thai semantic textual similarity benchmark
 - We use [STS-B translated ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
