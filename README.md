@@ -2,35 +2,33 @@
 Benchmark for Thai sentence representation on Thai STS-B and Transfer (text classification) datasets.
 
 # Motivation
-Sentence representation plays a crucial role in NLP downstream tasks such as NLI, text classification, and STS. Recent sentence representation training techniques require NLI or STS datasets.  However, there are no equivalent Thai NLI or STS datasets for sentence representation training.
-To address this problem, we train a sentence representation model with an unsupervised technique called SimCSE.
+Sentence representation plays a crucial role in NLP downstream tasks such as NLI, text classification, and STS. Recent sentence representation training techniques require NLI or STS datasets. However, no equivalent Thai NLI or STS datasets exist for sentence representation training. 
+To address this problem, we create "Thai sentence vector benchmark" to demonstrate that we can train Thai sentence representation without any supervised datasets. 
 
-We show that it is possible to train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the Google Colab (V100) where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
+Our first preliminary results demonstrate that we can train a robust sentence representation model with an unsupervised technique called SimCSE. We show that it is possible to train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the Google Colab (V100), where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
 
-Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of the sentence representations’ performance on Thai STS-B (translated version of [STS-B](https://github.com/facebookresearch/SentEval)). In addition, we evalute the accuracy and F1 scores of Thai text classification datasets [HERE](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/Transfer_Evaluation/Transfer_Evaluation.ipynb).
+Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of the sentence representations' performance on Thai STS-B (translated version of [STS-B](https://github.com/facebookresearch/SentEval)). In addition, we evaluate the accuracy and F1 scores of Thai text classification datasets [HERE](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/Transfer_Evaluation/Transfer_Evaluation.ipynb).
 
 # How do we train unsupervised sentence representation?
 - We use [SimCSE:Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) on multilingual LM models (mBERT, distil-mBERT, XLM-R) and a monolingual model (WangchanBERTa).
 - Training data: [Thai Wikipedia](https://github.com/PyThaiNLP/ThaiWiki-clean/releases/tag/20210620?fbclid=IwAR2_CtHJ_6od9z5-0hsolwcNYJH03e5qk_XXkoxDpOQivmo8QreYFQS3JuQ).
 - Example: [SimCSE-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb).
 - Training Example on Google Colab: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb
+
 ## Why SimCSE?
 - Easy to train
 - Compatible with every model
 - Does not require any annotated dataset
 - The performance of XLM-R (unsupervised) and m-Distil-BERT (supervised and trained on > 1B sentences) are similar (1% difference in correlation).
 
-# What about Supervised Learning?
-- We recommend [sentence-bert](https://github.com/UKPLab/sentence-transformers), which you can train with NLI, STS, triplet loss, contrastive loss, etc.
-
-# What about Unsupervised Learning and Distillation?
-- ConGen: https://github.com/KornWtp/ConGen (EMNLP'22)
-
-# Multilingual Representation?
-- CL-ReLKT: https://github.com/mrpeerat/CL-ReLKT (NAACL'22)
+# What about other techniques? 
+We also consider other techniques in this repository. Currently, we have many methods tested on our benchmarks :)
+- Supervised Learning: [sentence-bert](https://github.com/UKPLab/sentence-transformers).
+- Unsupervised sentence representation distillation: [ConGen](https://github.com/KornWtp/ConGen) (EMNLP'22)
+- Multilingual sentence representation alignment: [CL-ReLKT](https://github.com/mrpeerat/CL-ReLKT) (NAACL'22)
 
 # Thai semantic textual similarity benchmark
-- We use [STS-B translated ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate.
+- We use [STS-B translated ver.](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv) in which we translate STS-B from [SentEval](https://github.com/facebookresearch/SentEval) by using google-translate API.
 - How to evaluate sentence representation: [SentEval.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/STS_Evaluation/SentEval.ipynb) 
 - For the easy-to-implement version: [Easy_Evaluation.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/STS_Evaluation/Easy_Evaluation.ipynb)
 - How to evaluate sentence representation on Google Colab: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb
