@@ -10,16 +10,26 @@ Our first preliminary results demonstrate that we can train a robust sentence re
 Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearman correlation score of the sentence representations' performance on Thai STS-B (translated version of [STS-B](https://github.com/facebookresearch/SentEval)). In addition, we evaluate the accuracy and F1 scores of Thai text classification datasets [HERE](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/Transfer_Evaluation/Transfer_Evaluation.ipynb).
 
 # How do we train unsupervised sentence representation?
+
+## SimCSE
 - We use [SimCSE:Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) on multilingual LM models (mBERT, distil-mBERT, XLM-R) and a monolingual model (WangchanBERTa).
 - Training data: [Thai Wikipedia](https://github.com/PyThaiNLP/ThaiWiki-clean/releases/tag/20210620?fbclid=IwAR2_CtHJ_6od9z5-0hsolwcNYJH03e5qk_XXkoxDpOQivmo8QreYFQS3JuQ).
 - Example: [SimCSE-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb).
 - Training Example on Google Colab: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb
-
-## Why SimCSE?
+### Why SimCSE?
 - Easy to train
 - Compatible with every model
 - Does not require any annotated dataset
 - The performance of XLM-R (unsupervised) and m-Distil-BERT (supervised and trained on > 1B sentences) are similar (1% difference in correlation).
+
+## ConGen
+- We use the training objective from [ConGen](https://github.com/KornWtp/ConGen) on various PLMs.
+- Training data: [scb-mt-en-th-2020](https://medium.com/@onarinlap/scb-mt-en-th-2020-%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-machine-translation-%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-open-data-fe1c7b9d8271) with 
+- Example: [ConGen-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/ConGen-Thai.ipynb)
+### Why ConGen
+- The best sentence representation method (for now) in term of the performance on STS and downstream tasks (ConGen also outperformed SimCSE in their paper). 
+- Compatible with every model
+- Does not require any annotated dataset
 
 # What about other techniques? 
 We also consider other techniques in this repository. Currently, we have many methods tested on our benchmarks :)
