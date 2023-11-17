@@ -23,7 +23,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Example: [ConGen-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/ConGen-Thai.ipynb)
 
 ## SCT
-- We use the training objective from [SCT]([https://github.com/KornWtp/ConGen](https://github.com/mrpeerat/SCT) on various PLMs.
+- We use the training objective from [SCT](https://github.com/mrpeerat/SCT) on various PLMs.
 - Training data: [scb-mt-en-th-2020](https://medium.com/@onarinlap/scb-mt-en-th-2020-%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-machine-translation-%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-open-data-fe1c7b9d8271) with 
 - Example: [SCT-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SCT-Thai.ipynb)
 
@@ -33,7 +33,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Does not require any annotated dataset
 - The best sentence representation method (for now) in terms of the performance on STS and downstream tasks (SCT outperformed ConGen and SimCSE in their paper). 
 
-# What about other techniques? 
+### What about other techniques? 
 We also consider other techniques in this repository. Currently, we have many methods tested on our benchmarks :)
 - Supervised learning: [sentence-bert](https://github.com/UKPLab/sentence-transformers).
 - Multilingual sentence representation alignment: [CL-ReLKT](https://github.com/mrpeerat/CL-ReLKT) (NAACL'22)
@@ -71,8 +71,6 @@ We also consider other techniques in this repository. Currently, we have many me
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 67.84  | 68.31  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 63.31  | 63.74  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 67.05  | 67.67  | :heavy_check_mark:
-
-
 
 ## Wongnai
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
