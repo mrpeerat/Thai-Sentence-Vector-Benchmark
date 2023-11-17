@@ -21,10 +21,6 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - We use the training objective from [ConGen](https://github.com/KornWtp/ConGen) on various PLMs.
 - Training data: [scb-mt-en-th-2020](https://medium.com/@onarinlap/scb-mt-en-th-2020-%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-machine-translation-%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-open-data-fe1c7b9d8271) with 
 - Example: [ConGen-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/ConGen-Thai.ipynb)
-### Why ConGen
-- The best sentence representation method (for now) in term of the performance on STS and downstream tasks (ConGen also outperformed SimCSE in their paper). 
-- Compatible with every model
-- Does not require any annotated dataset
 
 ## SCT
 - We use the training objective from [SCT]([https://github.com/KornWtp/ConGen](https://github.com/mrpeerat/SCT)) on various PLMs.
@@ -35,7 +31,7 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Easy to train
 - Compatible with every model
 - Does not require any annotated dataset
-- The best sentence representation method (for now) in term of the performance on STS and downstream tasks (SCT outperformed ConGen and SimCSE in their paper). 
+- The best sentence representation method (for now) in terms of the performance on STS and downstream tasks (SCT outperformed ConGen and SimCSE in their paper). 
 
 # What about other techniques? 
 We also consider other techniques in this repository. Currently, we have many methods tested on our benchmarks :)
