@@ -16,11 +16,6 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Training data: [Thai Wikipedia](https://github.com/PyThaiNLP/ThaiWiki-clean/releases/tag/20210620?fbclid=IwAR2_CtHJ_6od9z5-0hsolwcNYJH03e5qk_XXkoxDpOQivmo8QreYFQS3JuQ).
 - Example: [SimCSE-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb).
 - Training Example on Google Colab: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SimCSE-Thai.ipynb
-### Why SimCSE?
-- Easy to train
-- Compatible with every model
-- Does not require any annotated dataset
-- The performance of XLM-R (unsupervised) and m-Distil-BERT (supervised and trained on > 1B sentences) are similar (1% difference in correlation).
 
 ## ConGen
 - We use the training objective from [ConGen](https://github.com/KornWtp/ConGen) on various PLMs.
@@ -31,10 +26,20 @@ Moreover, we provide the Thai sentence vector benchmark. We evaluate the Spearma
 - Compatible with every model
 - Does not require any annotated dataset
 
+## SCT
+- We use the training objective from [SCT]([https://github.com/KornWtp/ConGen](https://github.com/mrpeerat/SCT)) on various PLMs.
+- Training data: [scb-mt-en-th-2020](https://medium.com/@onarinlap/scb-mt-en-th-2020-%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%99-machine-translation-%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B2%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-open-data-fe1c7b9d8271) with 
+- Example: [SCT-Thai.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SCT-Thai.ipynb)
+
+### Why do we use these techniques? 
+- Easy to train
+- Compatible with every model
+- Does not require any annotated dataset
+- The best sentence representation method (for now) in term of the performance on STS and downstream tasks (SCT outperformed ConGen and SimCSE in their paper). 
+
 # What about other techniques? 
 We also consider other techniques in this repository. Currently, we have many methods tested on our benchmarks :)
-- Supervised Learning: [sentence-bert](https://github.com/UKPLab/sentence-transformers).
-- Unsupervised sentence representation distillation: [ConGen](https://github.com/KornWtp/ConGen) (EMNLP'22)
+- Supervised learning: [sentence-bert](https://github.com/UKPLab/sentence-transformers).
 - Multilingual sentence representation alignment: [CL-ReLKT](https://github.com/mrpeerat/CL-ReLKT) (NAACL'22)
 
 # Thai semantic textual similarity benchmark
@@ -86,7 +91,6 @@ We also consider other techniques in this repository. Currently, we have many me
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 45.20  | 46.72  | :heavy_check_mark:
 
 
-
 ## Generated Review
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
@@ -99,6 +103,46 @@ We also consider other techniques in this repository. Currently, we have many me
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
 
+
+# Thai retrieval benchmark
+- We use [XQuAD](https://github.com/google-deepmind/xquad), [MIRACL]https://huggingface.co/datasets/miracl/miracl), and [TyDiQA](https://huggingface.co/datasets/khalidalt/tydiqa-goldp) datasets.
+- How to evaluate: [Retrieval_Evaluation](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/Retrieval_Evaluation)
+
+## XQuAD
+| Base Model  | R@1 | MRR@10 | Supervised? |
+| ------------- | :-------------: | :-------------: | :-------------: |
+| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
+| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+
+## MIRACL
+| Base Model  | R@1 | MRR@10 | Supervised? |
+| ------------- | :-------------: | :-------------: | :-------------: |
+| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
+| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+
+## TyDiQA
+| Base Model  | R@1 | MRR@10 | Supervised? |
+| ------------- | :-------------: | :-------------: | :-------------: |
+| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
+| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
 
 
 # Thank you for the many codes from
