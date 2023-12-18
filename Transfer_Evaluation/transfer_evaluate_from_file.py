@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 from transfer import Transfer
 
 from sentence_transformers import SentenceTransformer
