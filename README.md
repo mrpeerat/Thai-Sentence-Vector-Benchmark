@@ -1,5 +1,5 @@
 # Thai-Sentence-Vector-Benchmark
-Benchmark for Thai sentence representation on Thai STS-B and Transfer (text classification) datasets.
+Benchmark for Thai sentence representation on Thai STS-B, Text classification, and Retrieval datasets.
 
 # Motivation
 Sentence representation plays a crucial role in NLP downstream tasks such as NLI, text classification, and STS. Recent sentence representation training techniques require NLI or STS datasets. However, no equivalent Thai NLI or STS datasets exist for sentence representation training. 
