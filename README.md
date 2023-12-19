@@ -99,10 +99,10 @@ We also consider other techniques in this repository. Currently, we have many me
 
 # Thai pair classification benchmark
 - We use [XNLI dev and test set](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv). We drop neutral classes and change from contradiction => 0 and entailment =>1.
-- We use the AUC score as the main metric: AUC(y_label, 1-cosine(sent1,sent2))
+- We use the average precision score as the main metric.
 - How to evaluate: [XNLI_evaluation.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/PairClassification_Evaluation)
 
-| Base Model  | Dev (AUC) | Test (AUC) | Supervised? |
+| Base Model  | Dev (AP) | Test (AP) | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
