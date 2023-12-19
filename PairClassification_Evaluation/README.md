@@ -1,6 +1,6 @@
-# How do we evaluate retrieval?
+# How do we evaluate pair classification?
 
 # Note
-- We split the evaluation of three datasets into three files
-- We use R@1 or P@1 (both of them are the same for retrieval) and MRR@10
+- We evaluate encoders on XNLI dev and test sets (only entailment and contradiction classes)
+- We use the AUC score as the main evaluation metric
 - Don't forget to change your base encoder! 

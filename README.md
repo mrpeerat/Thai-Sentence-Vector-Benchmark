@@ -97,6 +97,22 @@ We also consider other techniques in this repository. Currently, we have many me
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
 
+# Thai pair classification benchmark
+- We use [XNLI dev and test set](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/sts-test_th.csv). We drop neutral classes and change from contradiction => 0 and entailment =>1.
+- We use the AUC score as the main metric: AUC(y_label, 1-cosine(sent1,sent2))
+- How to evaluate: [XNLI_evaluation.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/PairClassification_Evaluation)
+
+| Base Model  | Dev (AUC) | Test (AUC) | Supervised? |
+| ------------- | :-------------: | :-------------: | :-------------: |
+| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
+| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  | 
+| [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX |
+| [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX | XX.XX  |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | XX.XX  | XX.XX  | :heavy_check_mark:
+
 
 # Thai retrieval benchmark
 - We use [XQuAD](https://github.com/google-deepmind/xquad), [MIRACL](https://huggingface.co/datasets/miracl/miracl), and [TyDiQA](https://huggingface.co/datasets/khalidalt/tydiqa-goldp) datasets.
