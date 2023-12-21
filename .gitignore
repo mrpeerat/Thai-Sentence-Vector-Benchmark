@@ -1,0 +1,8 @@
+PairClassification_Evaluation/.ipy*
+Retrieval_Evaluation/.ipy*
+ReQA_Evaluation/
+Retrieval_Evaluation/.ipy*
+output/
+PairClassification_Evaluation/XNLI-1.0
+Retrieval_Evaluation/xquad.th.json
+train_dataset.tsv
