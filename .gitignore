@@ -7,3 +7,4 @@ PairClassification_Evaluation/XNLI-1.0
 Retrieval_Evaluation/xquad.th.json
 train_dataset.tsv
 .ipynb*
+Retrieval_Evaluation/__py*
