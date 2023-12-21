@@ -8,3 +8,9 @@ Retrieval_Evaluation/xquad.th.json
 train_dataset.tsv
 .ipynb*
 Retrieval_Evaluation/__py*
+
+Retrieval_Evaluation/*-checkpoint*
+PairClassification_Evaluation/*-checkpoint*
+STS_Evaluation/*-checkpoint*
+Transfer_Evaluation/.ipy*
+Transfer_Evaluation/*-checkpoint*
