@@ -55,6 +55,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 76.56  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.37  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 80.49  | :heavy_check_mark:
+| Cohere-embed-multilingual-v2.0  | 68.03  | ?
 
 
 # Thai transfer benchmark
@@ -113,6 +114,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.35  | 64.93  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 84.14  | 84.06  | :heavy_check_mark:
+| Cohere-embed-multilingual-v2.0  | 60.25  | 61.15  | ?
 
 
 # Thai retrieval benchmark
