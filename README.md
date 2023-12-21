@@ -55,7 +55,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 76.56  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.37  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 80.49  | :heavy_check_mark:
-| Cohere-embed-multilingual-v2.0  | 68.03  | ?
+| Cohere-embed-multilingual-v2.0  | 68.03  | :heavy_check_mark:
 
 
 # Thai transfer benchmark
@@ -114,7 +114,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.35  | 64.93  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 84.14  | 84.06  | :heavy_check_mark:
-| Cohere-embed-multilingual-v2.0  | 60.25  | 61.15  | ?
+| Cohere-embed-multilingual-v2.0  | 60.25  | 61.15  | :heavy_check_mark:
 
 
 # Thai retrieval benchmark
@@ -132,6 +132,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 49.16  | 58.19  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 71.26  | 79.63  | :heavy_check_mark:
+| Cohere-embed-multilingual-v2.0  | 82.52 | 87.78  | :heavy_check_mark:
 
 ## MIRACL
 | Base Model  | R@1 | MRR@10 | Supervised? |
@@ -144,6 +145,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 17.74  | 27.78  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 38.20  | 49.65  | :heavy_check_mark:
+| Cohere-embed-multilingual-v2.0  | 66.98 | 77.58  | :heavy_check_mark:
 
 ## TyDiQA
 | Base Model  | R@1 | MRR@10 | Supervised? |
@@ -156,6 +158,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 32.50  | 42.20  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 54.39  | 63.12  | :heavy_check_mark:
+| Cohere-embed-multilingual-v2.0  | 85.45 | 90.33  | :heavy_check_mark:
 
 
 # Thank you for the many codes from
