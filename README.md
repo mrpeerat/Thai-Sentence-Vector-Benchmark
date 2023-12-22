@@ -47,10 +47,11 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 
 | Base Model  | Spearman's Correlation (*100) | Supervised? |
 | ------------- | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | 38.84  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | 39.26  | 
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | 52.66  | 
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | 62.60  | 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.27  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 43.95  | 
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 60.95  | 
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.28  | 
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 63.98  | 
 | [SCT-model-wangchanberta]()  | XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 66.21  |
