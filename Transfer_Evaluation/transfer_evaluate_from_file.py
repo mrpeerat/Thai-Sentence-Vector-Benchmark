@@ -12,3 +12,4 @@ transfer_run = Transfer(model,task_names)
 
 print(f"Model:{model_name}")
 transfer_run.run()
+
