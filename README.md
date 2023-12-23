@@ -68,45 +68,51 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 ## Wisesight
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | 55.37  | 55.92  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | 56.72  | 56.95  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | 62.22  | 63.06  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | 61.96  | 62.48  | 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 56.12  | 56.60  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 55.86  | 56.65  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 64.17  | 64.39  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.59  | 67.73  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 62.07  | 62.76  | 
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 65.07  | 65.28  |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 67.84  | 68.31  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 63.31  | 63.74  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 67.05  | 67.67  | :heavy_check_mark:
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 67.13  | 67.53  | :heavy_check_mark:
 
 ## Wongnai
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | 36.56  | 37.31  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | 39.63  | 38.96  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | 41.38  | 37.46  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | 44.11  | 40.34  | 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 34.31  | 35.81  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 37.55  | 38.29  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 40.95  | 37.58  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 37.53  | 38.45  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 40.46  | 38.06  | 
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 41.32  | 41.57 |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 47.22  | 48.63  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 37.76  | 40.07  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 45.20  | 46.72  | :heavy_check_mark:
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | xx.xx  | xx.xx  | :heavy_check_mark:
 
 
 ## Generated Review
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | 38.29  | 37.10  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | 38.30  | 36.63  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | 46.63  | 42.60  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | 42.93  | 42.81  | 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 39.11  | 37.27  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 38.72  | 37.56  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 37.37  | 36.72  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 48.76  | 45.14  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 46.27  | 44.22  | 
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 49.81  | 47.94 |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 58.00 | 56.80  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | xx.xx  | xx.xx  | :heavy_check_mark:
 
 # Thai pair classification benchmark
 - We use [XNLI dev and test set](https://dl.fbaipublicfiles.com/XNLI/XNLI-1.0.zip). We drop neutral classes and change from contradiction => 0 and entailment =>1.
@@ -115,10 +121,11 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 
 | Base Model  | Dev (AP) | Test (AP) | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  | 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 57.99  | 56.06  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 58.41  | 58.09  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 58.13  | 59.01  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 62.10  | 63.34  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 62.05  | 62.05  | 
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX |
@@ -135,10 +142,11 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 ## XQuAD
 | Base Model  | R@1 | MRR@10 | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 18.24  | 27.19  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 22.94  | 30.29  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 53.87  | 65.51  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 73.95  | 81.67  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 52.02  | 62.94  |
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
@@ -150,10 +158,11 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 ## MIRACL
 | Base Model  | R@1 | MRR@10 | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 28.51  | 37.05  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 26.19  | 36.11  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 36.29  | 48.96  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 43.25  | 57.28  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 34.92  | 47.51  |
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
@@ -165,10 +174,11 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 ## TyDiQA
 | Base Model  | R@1 | MRR@10 | Supervised? |
 | ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/mrp/simcse-model-distil-m-bert)  | XX.XX  | XX.XX  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/mrp/simcse-model-m-bert-thai-cased)  | XX.XX  | XX.XX  |
-| [simcse-model-wangchanberta](https://huggingface.co/mrp/simcse-model-wangchanberta)  | XX.XX  | XX.XX  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/mrp/simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.69  | 51.39  |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 45.09  | 52.37  |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 62.65  | 70.02  |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 71.43  | 78.16  |
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 58.06  | 64.72  |
 | [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
