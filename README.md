@@ -53,7 +53,11 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.28  | 
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 63.98  | 
 | [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
 | [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 66.21  |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 76.56  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.37  | :heavy_check_mark:
@@ -73,8 +77,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 64.17  | 64.39  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.59  | 67.73  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 62.07  | 62.76  | 
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  |
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 65.07  | 65.28  |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 67.84  | 68.31  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 63.31  | 63.74  | :heavy_check_mark:
@@ -89,8 +97,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 40.95  | 37.58  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 37.53  | 38.45  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 40.46  | 38.06  | 
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  |
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 41.32  | 41.57 |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 47.22  | 48.63  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 37.76  | 40.07  | :heavy_check_mark:
@@ -106,8 +118,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 37.37  | 36.72  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 48.76  | 45.14  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 46.27  | 44.22  | 
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  |
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | 49.81  | 47.94 |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | 58.00 | 56.80  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
@@ -126,8 +142,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 58.13  | 59.01  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 62.10  | 63.34  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 62.05  | 62.05  | 
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  |
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.35  | 64.93  | :heavy_check_mark:
@@ -147,8 +167,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 53.87  | 65.51  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 73.95  | 81.67  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 52.02  | 62.94  |
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  |
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 49.16  | 58.19  | :heavy_check_mark:
@@ -163,8 +187,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 36.29  | 48.96  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 43.25  | 57.28  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 34.92  | 47.51  |
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  | 
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 17.74  | 27.78  | :heavy_check_mark:
@@ -179,8 +207,12 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 62.65  | 70.02  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 71.43  | 78.16  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 58.06  | 64.72  |
-| [SCT-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
-| [SCT-Distil-model-wangchanberta]()  | XX.XX  |  XX.XX  | 
+| [SCT-model-wangchanberta]()  | XX.XX  | 
+| [SCT-model-phayathaibert]()  | XX.XX  | 
+| [SCT-Distil-model-wangchanberta]()  | XX.XX  | 
+| [SCT-Distil-model-phayathaibert]()  | XX.XX  | 
+| [ConGen-model-wangchanberta]()  | XX.XX  | 
+| [ConGen-model-phayathaibert]()  | XX.XX  |
 | [ConGen-simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/ConGen-simcse-model-roberta-base-thai)  | XX.XX  | XX.XX  |
 | [ConGen-paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/kornwtp/ConGen-paraphrase-multilingual-mpnet-base-v2/tree/main)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 32.50  | 42.20  | :heavy_check_mark:
