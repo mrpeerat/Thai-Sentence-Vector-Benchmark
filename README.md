@@ -49,11 +49,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.27  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 43.95  | 
+| [simcse-model-XLMR]()  | XX.XX  | 
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 60.95  | 
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.28  | 
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 63.98  | 
+| [SCT-model-XLMR]()  | 68.90  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 71.35  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 74.06  | 
+| [SCT-Distil-model-XLMR]()  | 78.78  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 77.77  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.89  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 79.20  | 
@@ -72,11 +75,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 56.12  | 56.60  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 55.86  | 56.65  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 64.17  | 64.39  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.59  | 67.73  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 62.07  | 62.76  | 
+| [SCT-model-XLMR]()  | 67.47  | 67.62  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 68.51  | 68.97  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 70.80  | 68.60  | 
+| [SCT-Distil-model-XLMR]()  | 67.73  | 67.75  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 65.78  | 66.17  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 66.64  | 66.94  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 67.09  | 67.65  | 
@@ -90,11 +96,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 34.31  | 35.81  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 37.55  | 38.29  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 40.95  | 37.58  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 37.53  | 38.45  |
-| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 40.46  | 38.06  | 
+| [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 40.46  | 38.06  |
+| [SCT-model-XLMR]()  | 42.88  | 44.75  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 47.90  | 47.23  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 54.73  | 49.48  | 
+| [SCT-Distil-model-XLMR]()  | 46.16  | 47.02  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 48.61  | 44.89  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 48.86  | 48.14  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 46.72 | 48.04  | 
@@ -109,11 +118,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 39.11  | 37.27  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 38.72  | 37.56  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 37.37  | 36.72  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 48.76  | 45.14  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 46.27  | 44.22  | 
+| [SCT-model-XLMR]()  | 55.93  | 54.19  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 50.39  | 48.65  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 54.90  | 48.36  | 
+| [SCT-Distil-model-XLMR]()  | 56.76  | 55.50  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 52.33  | 48.41  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 54.35  | 52.23  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 58.67  | 57.51  | 
@@ -131,11 +143,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 57.99  | 56.06  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 58.41  | 58.09  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 58.13  | 59.01  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 62.10  | 63.34  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 62.05  | 62.05  | 
+| [SCT-model-XLMR]()  | 64.53  | 65.29  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 66.36  | 66.79  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 65.35  | 65.84  | 
+| [SCT-Distil-model-XLMR]()  | 78.40  | 79.14  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 77.06  | 76.75  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.95  | 77.61  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 82.24  | 81.15  | 
@@ -154,11 +169,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 18.24  | 27.19  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 22.94  | 30.29  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 53.87  | 65.51  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 73.95  | 81.67  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 52.02  | 62.94  |
+| [SCT-model-XLMR]()  | 55.29  | 65.23  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 66.30  | 76.14  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 67.56  | 76.14  | 
+| [SCT-Distil-model-XLMR]()  | 68.91  | 78.19  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 62.27  | 72.53  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 71.43  | 80.18  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 70.92  | 79.59  | 
@@ -172,11 +190,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 28.51  | 37.05  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 26.19  | 36.11  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 36.29  | 48.96  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 43.25  | 57.28  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 34.92  | 47.51  |
+| [SCT-model-XLMR]()  | 28.51  | 40.84  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 35.33  | 48.19  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 37.52  | 51.02  | 
+| [SCT-Distil-model-XLMR]()  | 40.38  | 51.68  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 39.43  | 50.61  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 45.16  | 56.52  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 41.06  | 53.31  | 
@@ -190,11 +211,14 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | ------------- | :-------------: | :-------------: | :-------------: |
 | [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.69  | 51.39  |
 | [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 45.09  | 52.37  |
+| [simcse-model-XLMR]()  | XX.XX  | XX.XX  |
 | [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 62.65  | 70.02  |
 | [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 71.43  | 78.16  |
 | [simcse-model-roberta-base-thai](https://huggingface.co/kornwtp/simcse-model-roberta-base-thai)  | 58.06  | 64.72  |
+| [SCT-model-XLMR]()  | 49.28  | 58.62  | 
 | [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 58.19  | 68.05  | 
 | [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 63.43  | 71.73  | 
+| [SCT-Distil-model-XLMR]()  | 56.36  | 65.18  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 56.23  | 65.18  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 58.32  | 67.42  | 
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 59.11  | 67.42  | 
