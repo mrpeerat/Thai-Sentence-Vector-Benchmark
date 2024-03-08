@@ -231,7 +231,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 # Thank you for the many codes from
 - [Sentence-transformer (Sentence-BERT)](https://github.com/UKPLab/sentence-transformers)
 - [SimCSE github](https://github.com/princeton-nlp/SimCSE)
-- [Congen github](https://github.com/KornWtp/ConGen)
+- [ConGen github](https://github.com/KornWtp/ConGen)
 - [SCT github](https://github.com/mrpeerat/SCT)
 
 Acknowledgments:
