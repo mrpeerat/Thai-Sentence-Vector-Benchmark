@@ -87,9 +87,19 @@ class Transfer:
                 X_train_encode = np.concatenate(X_train_encode,0)
                 X_val_encode = np.concatenate(X_val_encode,0)
             else:
-                X_train_encode = self.model.encode(X_train)
-                X_val_encode = self.model.encode(X_val)
-                X_test_encode = self.model.encode(X_test)
+                try:
+                    X_train_encode = self.model.encode(X_train,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
+                    X_val_encode = self.model.encode(X_val,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
+                    X_test_encode = self.model.encode(X_test,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
+                except:
+                    X_train_encode = self.model.encode(X_train,batch_size=12)
+                    X_val_encode = self.model.encode(X_val,batch_size=12)
+                    X_test_encode = self.model.encode(X_test,batch_size=12)
+                if 'dense_vecs' in X_train_encode:
+                    X_train_encode = X_train_encode['dense_vecs']
+                    X_val_encode = X_val_encode['dense_vecs']
+                    X_test_encode = X_test_encode['dense_vecs']
+                
             
             text_clf = LinearSVC(class_weight='balanced')
             text_clf.fit(X_train_encode, y_train)
