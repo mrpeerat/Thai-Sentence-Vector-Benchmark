@@ -135,7 +135,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
-| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | xx  | xx  | :heavy_check_mark:
+| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 59.53  | 58.35  | :heavy_check_mark:
 | [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | xx.xx  | xx.xx  | :heavy_check_mark:
 
 # Thai pair classification benchmark
