@@ -109,7 +109,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 48.86  | 48.14  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 44.95  | 46.57  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 46.72 | 48.04  | 
-| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 45.99 | 47.54  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 37.76  | 40.07  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 45.20  | 46.72  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | xx  | xx  | :heavy_check_mark:
@@ -132,7 +132,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 54.35  | 52.23  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 57.93  | 56.66  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 58.67  | 57.51  | 
-| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 58.43  | 57.23  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 59.53  | 58.35  | :heavy_check_mark:
