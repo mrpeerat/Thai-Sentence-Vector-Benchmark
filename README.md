@@ -60,7 +60,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.89  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 79.69  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 79.20  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 78.90  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.37  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 80.49  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)  | 77.22  | :heavy_check_mark:
@@ -87,7 +87,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 66.64  | 66.94  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 66.75  | 67.41  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 67.09  | 67.65  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 67.65  | 68.12  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 63.31  | 63.74  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 67.05  | 67.67  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 68.36  | 68.92  | :heavy_check_mark:
@@ -109,7 +109,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 48.86  | 48.14  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 44.95  | 46.57  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 46.72 | 48.04  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 37.76  | 40.07  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 45.20  | 46.72  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | xx  | xx  | :heavy_check_mark:
@@ -132,7 +132,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 54.35  | 52.23  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 57.93  | 56.66  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 58.67  | 57.51  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | XX.XX  | XX.XX  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 59.53  | 58.35  | :heavy_check_mark:
@@ -158,7 +158,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.95  | 77.61  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 80.68  | 80.98  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 82.24  | 81.15  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 80.89  | 80.51  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.35  | 64.93  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 84.14  | 84.06  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 79.09  | 79.02  | :heavy_check_mark:
@@ -185,7 +185,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 71.43  | 80.18  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 71.76  | 80.01  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 70.92  | 79.59  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 71.85  | 80.33  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 49.16  | 58.19  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 71.26  | 79.63  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 90.50  | 94.33  | :heavy_check_mark:
@@ -207,7 +207,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 45.16  | 56.52  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 43.11  | 55.51  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 41.06  | 53.31  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 44.34  | 55.77  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 17.74  | 27.78  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 38.20  | 49.65  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 79.67  | 86.68  | :heavy_check_mark:
@@ -229,7 +229,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 58.32  | 67.42  | 
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 60.29  | 68.56  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 59.11  | 67.42  | 
-| [ConGen-model-phayathaibert]()  | XX.XX  | XX.XX  |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 59.24  | 67.69  |
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 32.50  | 42.20  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 54.39  | 63.12  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 89.12  | 93.43  | :heavy_check_mark:
