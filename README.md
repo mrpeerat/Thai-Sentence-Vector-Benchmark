@@ -45,27 +45,27 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 - How to evaluate sentence representation: [Easy_Evaluation.ipynb](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/STS_Evaluation/Easy_Evaluation.ipynb)
 - How to evaluate sentence representation on Google Colab: https://colab.research.google.com/github/mrpeerat/Thai-Sentence-Vector-Benchmark/blob/main/SentEval.ipynb
 
-| Base Model  | Spearman's Correlation (*100) | Supervised? |
-| ------------- | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.27  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 43.95  |  
-| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 63.98  |
-| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 60.95  | 
-| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.28  |  
-| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 68.90  | 
-| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 71.35  | 
-| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 74.06  | 
-| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 78.78  | 
-| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 77.77  | 
-| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.89  | 
-| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 79.69  |
-| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 79.20  | 
-| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 78.90  |
-| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 76.82  |
-| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.37  | :heavy_check_mark:
-| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 80.49  | :heavy_check_mark:
-| [BGE M-3](https://huggingface.co/BAAI/bge-m3)  | 77.22  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 68.03  | :heavy_check_mark:
+| Base Model  | Spearman's Correlation (*100) | Supervised? | Latency(ms) | 
+| ------------- | :-------------: | :-------------: | :-------------: |
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.27  |  | 7.5922 &plusmn; 0.4576   | 
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 43.95  |  | 12.3378 &plusmn; 0.9371 |
+| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 63.98  | | 10.8859 &plusmn; 0.4235|
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 60.95  | | 10.6852 &plusmn; 0.4882| 
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 68.28  | | 10.3826 &plusmn; 0.359| 
+| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 68.90  | | 10.7303 &plusmn; 0.4818|
+| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 71.35  | | 10.8952 &plusmn; 0.4841|
+| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 74.06  | | 11.1571 &plusmn; 0.6783|
+| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 78.78  | | 10.7105 &plusmn; 0.5615|
+| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 77.77  | | 10.488 &plusmn; 0.5168| 
+| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.89  | | 10.4419 &plusmn; 0.3999|
+| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 79.69  | | 11.9085 &plusmn; 1.0291|
+| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 79.20  | | 11.3214 &plusmn; 0.6651| 
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 78.90  | | 10.967 &plusmn; 0.4556| 
+| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 76.82  | | 10.5473 &plusmn; 0.2487|
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 65.37  | :heavy_check_mark: |  9.4441 &plusmn; 1.3241|
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 80.49  | :heavy_check_mark: | 11.7187 &plusmn; 6.1376|
+| [BGE M-3](https://huggingface.co/BAAI/bge-m3)  | 77.22  | :heavy_check_mark: | 23.3093 &plusmn; 2.8531|
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 68.03  | :heavy_check_mark: | | | 
 
 
 # Thai transfer benchmark
