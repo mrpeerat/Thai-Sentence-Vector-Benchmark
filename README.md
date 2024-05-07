@@ -58,6 +58,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 78.78  | | 10.69 &plusmn; 0.48|
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 77.77  | | 10.86 &plusmn; 0.55| 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.89  | | 11.01 &plusmn; 0.62|
+| [SCT-Distillation-model-phayathaibert-bge-m3]() | 76.71| | |
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 79.69  | | 10.79 &plusmn; 0.38 |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 79.20  | | 10.44 &plusmn; 0.5 | 
 | [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 78.90  | | 10.32 &plusmn; 0.31| 
@@ -188,6 +189,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 68.91  | 78.19  |  | 1.24 |
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 62.27  | 72.53  | | 1.35 |
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 71.43  | 80.18  | | 1.21 |
+| [SCT-Distillation-model-phayathaibert-bge-m3]() | 80.50 | 86.75 |  |  |
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 71.76  | 80.01  | | 1.24 |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 70.92  | 79.59  | | 1.21 |
 | [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 71.85  | 80.33  | | 1.19 |
@@ -212,6 +214,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 40.38  | 51.68  |  | 16.17 |
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 39.43  | 50.61  | | 16.04|
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 45.16  | 56.52  | | 15.82|
+| [SCT-Distillation-model-phayathaibert-bge-m3]() | 64.80 |  74.46 |  |  |
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 43.11  | 55.51  | | 16.4 |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 41.06  | 53.31  | | 15.98 |
 | [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 44.34  | 55.77  | | 15.97 |
@@ -237,6 +240,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 56.36  | 65.18  | | 3.3 |
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 56.23  | 65.18  | | 3.18 |
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 58.32  | 67.42  | | 3.21 |
+| [SCT-Distillation-model-phayathaibert-bge-m3]() | 78.37 |  84.01|  | |
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 60.29  | 68.56  | | 3.28 |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 59.11  | 67.42  | | 3.19 |
 | [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 59.24  | 67.69  | | 3.15 |
