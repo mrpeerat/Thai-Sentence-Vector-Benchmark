@@ -161,6 +161,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 78.40  | 79.14  | 
 | [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 77.06  | 76.75  | 
 | [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 77.95  | 77.61  | 
+| [SCT-Distillation-model-phayathaibert-bge-m3]() | 75.18 | 74.83 |  |
 | [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 80.68  | 80.98  |
 | [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 82.24  | 81.15  | 
 | [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 80.89  | 80.51  |
