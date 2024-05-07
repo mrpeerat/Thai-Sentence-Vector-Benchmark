@@ -175,73 +175,76 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 - How to evaluate: [Retrieval_Evaluation](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/Retrieval_Evaluation)
 
 ## XQuAD
-| Base Model  | R@1 | MRR@10 | Supervised? |
-| ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 18.24  | 27.19  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 22.94  | 30.29  |
-| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 52.02  | 62.94  |
-| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 53.87  | 65.51  |
-| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 73.95  | 81.67  |
-| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 55.29  | 65.23  | 
-| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 66.30  | 76.14  | 
-| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 67.56  | 76.14  | 
-| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 68.91  | 78.19  | 
-| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 62.27  | 72.53  | 
-| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 71.43  | 80.18  | 
-| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 71.76  | 80.01  |
-| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 70.92  | 79.59  | 
-| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 71.85  | 80.33  |
-| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 85.80  | 90.48  |
-| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 49.16  | 58.19  | :heavy_check_mark:
-| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 71.26  | 79.63  | :heavy_check_mark:
-| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 90.50  | 94.33  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 82.52 | 87.78  | :heavy_check_mark:
+| Base Model  | R@1 | MRR@10 | Supervised? |  Latency(second) | 
+| ------------- | :-------------: | :-------------: | :-------------: | :-------------: 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 18.24  | 27.19  | | 0.61|
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 22.94  | 30.29  | | 1.02 |
+| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 52.02  | 62.94  | | 0.85 |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 53.87  | 65.51  | | 0.81 |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 73.95  | 81.67  | | 0.79 |
+| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 55.29  | 65.23  | | 1.24 |
+| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 66.30  | 76.14  |  | 1.23 |
+| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 67.56  | 76.14  |  | 1.19 |
+| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 68.91  | 78.19  |  | 1.24 |
+| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 62.27  | 72.53  | | 1.35 |
+| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 71.43  | 80.18  | | 1.21 |
+| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 71.76  | 80.01  | | 1.24 |
+| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 70.92  | 79.59  | | 1.21 |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 71.85  | 80.33  | | 1.19 |
+| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 85.80  | 90.48  | | 1.3 |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 49.16  | 58.19  | :heavy_check_mark: | 1.05 | 
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 71.26  | 79.63  | :heavy_check_mark: | 1.24 |
+| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 90.50  | 94.33  | :heavy_check_mark: | 7.22 |
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 82.52 | 87.78  | :heavy_check_mark: | XXX |
+
 
 ## MIRACL
-| Base Model  | R@1 | MRR@10 | Supervised? |
-| ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 28.51  | 37.05  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 26.19  | 36.11  |
-| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 34.92  | 47.51  |
-| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 36.29  | 48.96  |
-| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 43.25  | 57.28  |
-| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 28.51  | 40.84  | 
-| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 35.33  | 48.19  | 
-| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 37.52  | 51.02  | 
-| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 40.38  | 51.68  | 
-| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 39.43  | 50.61  | 
-| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 45.16  | 56.52  | 
-| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 43.11  | 55.51  |
-| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 41.06  | 53.31  | 
-| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 44.34  | 55.77  |
-| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 70.40  | 79.33  |
-| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 17.74  | 27.78  | :heavy_check_mark:
-| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 38.20  | 49.65  | :heavy_check_mark:
-| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 79.67  | 86.68  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 66.98 | 77.58  | :heavy_check_mark:
+| Base Model  | R@1 | MRR@10 | Supervised? | Latency(second) | 
+| ------------- | :-------------: | :-------------: | :-------------: | :-------------:  
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 28.51  | 37.05  | |  4.31 |
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 26.19  | 36.11 | | 6.66|
+| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 34.92  | 47.51  | |  6.17 |
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 36.29  | 48.96  | | 6.09 |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 43.25  | 57.28  | | 6.18 |
+| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 28.51  | 40.84  | | 16.29 |
+| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 35.33  | 48.19  | | 16.0 |
+| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 37.52  | 51.02  | | 15.8 |
+| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 40.38  | 51.68  |  | 16.17 |
+| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 39.43  | 50.61  | | 16.04|
+| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 45.16  | 56.52  | | 15.82|
+| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 43.11  | 55.51  | | 16.4 |
+| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 41.06  | 53.31  | | 15.98 |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 44.34  | 55.77  | | 15.97 |
+| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 70.40  | 79.33  | | 15.83 |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 17.74  | 27.78  | :heavy_check_mark: | 9.84 |
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 38.20  | 49.65  | :heavy_check_mark: | 16.22 |
+| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 79.67  | 86.68  | :heavy_check_mark: | 91.27 |
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 66.98 | 77.58  | :heavy_check_mark: |  XXX |
+
 
 ## TyDiQA
-| Base Model  | R@1 | MRR@10 | Supervised? |
-| ------------- | :-------------: | :-------------: | :-------------: |
-| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.69  | 51.39  |
-| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 45.09  | 52.37  |
-| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 58.06  | 64.72  |
-| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 62.65  | 70.02  |
-| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 71.43  | 78.16  |
-| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 49.28  | 58.62  | 
-| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 58.19  | 68.05  | 
-| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 63.43  | 71.73  | 
-| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 56.36  | 65.18  | 
-| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 56.23  | 65.18  | 
-| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 58.32  | 67.42  | 
-| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 60.29  | 68.56  |
-| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 59.11  | 67.42  | 
-| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 59.24  | 67.69  |
-| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 83.36  | 88.29  |
-| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 32.50  | 42.20  | :heavy_check_mark:
-| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 54.39  | 63.12  | :heavy_check_mark:
-| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 89.12  | 93.43  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 85.45 | 90.33  | :heavy_check_mark:
+
+| Base Model  | R@1 | MRR@10 | Supervised? | Latency(second) | 
+| ------------- | :-------------: | :-------------: | :-------------: | :-------------: 
+| [simcse-model-distil-m-bert](https://huggingface.co/kornwtp/simcse-model-distil-m-bert)  | 44.69  | 51.39  |   |1.6|
+| [simcse-model-m-bert-thai-cased](https://huggingface.co/kornwtp/simcse-model-m-bert-thai-cased)  | 45.09  | 52.37 | | 2.46 |
+| [simcse-model-XLMR](https://huggingface.co/kornwtp/simcse-model-XLMR)  | 58.06  | 64.72  | | 2.35 | 
+| [simcse-model-wangchanberta](https://huggingface.co/kornwtp/simcse-model-wangchanberta)  | 62.65  | 70.02  | | 2.32 |
+| [simcse-model-phayathaibert](https://huggingface.co/kornwtp/simcse-model-phayathaibert)  | 71.43  | 78.16  | | 2.28 |
+| [SCT-model-XLMR](https://huggingface.co/kornwtp/SCT-model-XLMR)  | 49.28  | 58.62  | | 3.15 |
+| [SCT-model-wangchanberta](https://huggingface.co/kornwtp/SCT-model-wangchanberta)  | 58.19  | 68.05  | | 3.21 |
+| [SCT-model-phayathaibert](https://huggingface.co/kornwtp/SCT-model-phayathaibert)  | 63.43  | 71.73  | | 3.21 |
+| [SCT-Distil-model-XLMR](https://huggingface.co/kornwtp/SCT-KD-model-XLMR)  | 56.36  | 65.18  | | 3.3 |
+| [SCT-Distil-model-wangchanberta](https://huggingface.co/kornwtp/SCT-KD-model-wangchanberta)  | 56.23  | 65.18  | | 3.18 |
+| [SCT-Distil-model-phayathaibert](https://huggingface.co/kornwtp/SCT-KD-model-phayathaibert)  | 58.32  | 67.42  | | 3.21 |
+| [ConGen-model-XLMR](https://huggingface.co/kornwtp/ConGen-model-XLMR)  | 60.29  | 68.56  | | 3.28 |
+| [ConGen-model-wangchanberta](https://huggingface.co/kornwtp/ConGen-model-wangchanberta)  | 59.11  | 67.42  | | 3.19 |
+| [ConGen-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-model-phayathaibert)  | 59.24  | 67.69  | | 3.15 |
+| [ConGen-BGE_M3-model-phayathaibert](https://huggingface.co/kornwtp/ConGen-BGE_M3-model-phayathaibert)  | 83.36  | 88.29 | | 3.14 |
+| [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 32.50  | 42.20  | :heavy_check_mark: | 2.05 |
+| [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 54.39  | 63.12  | :heavy_check_mark:|  3.16 |
+| [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 89.12  | 93.43  | :heavy_check_mark: | 20.87 | 
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 85.45 | 90.33  | :heavy_check_mark: | XXX |
 
 
 # Thank you for the many codes from
@@ -255,3 +258,10 @@ Acknowledgments:
 - Charin: proofread + idea
 
 ![1_3JJRwT1f2zTK1hx36-qXdg (1)](https://user-images.githubusercontent.com/21156980/139905794-5ce1389f-63e4-4da0-83b8-5b1aa3983222.jpeg)
+
+
+
+
+
+
+
