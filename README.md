@@ -1,9 +1,9 @@
 # Thai-Sentence-Vector-Benchmark
-Benchmark for Thai sentence representation on Thai STS-B, Text classification, and Retrieval datasets.
+Benchmark for Thai sentence representation based on Thai STS-B, Text classification, and Retrieval datasets.
 
 # Motivation
 Sentence representation plays a crucial role in NLP downstream tasks such as NLI, text classification, and STS. Recent sentence representation training techniques require NLI or STS datasets. However, no equivalent Thai NLI or STS datasets exist for sentence representation training. 
-To address this problem, we create "Thai sentence vector benchmark" to demonstrate that we can train Thai sentence representation without any supervised datasets. 
+To address this problem, we create "Thai sentence vector benchmark" to demonstrate that we can train Thai sentence representation without any supervised dataset. 
 
 Our first preliminary results demonstrate that we can train a robust sentence representation model with an unsupervised technique called SimCSE. We show that it is possible to train SimCSE with 1.3 M sentences from Wikipedia within 2 hours on the Google Colab (V100), where the performance of [SimCSE-XLM-R](https://huggingface.co/mrp/simcse-model-roberta-base-thai) is similar to [mDistil-BERT<-mUSE](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2) (train on > 1B sentences).
 
@@ -32,7 +32,7 @@ We provide simple and effective sentence embedding methods that do not require s
 ### Why do we select these techniques? 
 - Easy to train
 - Compatible with every model
-- Does not require any annotated datasets
+- Do not require any annotated dataset
 - The best sentence representation method (for now) in terms of the performance on STS and downstream tasks (SCT outperformed ConGen and SimCSE in their paper). 
 
 ### What about other techniques? 
