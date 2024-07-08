@@ -1,17 +1,18 @@
+from tqdm import trange
 from datasets import load_dataset
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 import numpy as np
-class Transfer:
-    def __init__(self, model, tasks, train_score=False, val_score=False, test_score=True, cohere=False):
-        self.model = model
+
+
+class TransferEvaluator:
+    def __init__(self, tasks, train_score=False, val_score=False, test_score=True):
         self.tasks = tasks
         self.train_score = train_score
         self.val_score = val_score
         self.test_score = test_score
-        self.cohere = cohere
 
     def wisesight_preprocess(self,data):
         X_train = data['train']['texts']
@@ -50,8 +51,10 @@ class Transfer:
             datasets.update({name: load_dataset(name)})
         return datasets
 
-    def run(self):
+    def __call__(self, model, cohere=False, bge=False):
         datasets = self.load_data()
+
+        results = {}
         for key in self.tasks:
             data = datasets[key]
             if key == 'wisesight_sentiment':
@@ -63,58 +66,61 @@ class Transfer:
             else:
                 raise Exception(f"Key Error:{key}")
                 
-            if self.cohere:
+            if cohere:
                 bs = 96
                 X_train_encode = []
                 X_val_encode = []
                 X_test_encode = []
-                for i in range(len(X_train)//bs+1):
-                    X_train_encode.append(self.model.embed(
-                      texts=X_train[(i*bs):((i+1)*bs)],
+                for i in trange(len(X_train)//bs+1):
+                    texts = X_train[(i*bs):((i+1)*bs)]
+                    if len(texts) == 0: continue
+                    X_train_encode.append(model.embed(
+                      texts=texts,
                       model='embed-multilingual-v2.0',
                     ).embeddings)
-                for i in range(len(X_val)//bs+1):
-                    X_val_encode.append(self.model.embed(
-                      texts=X_val[(i*bs):((i+1)*bs)],
+                for i in trange(len(X_val)//bs+1):
+                    texts=X_val[(i*bs):((i+1)*bs)]
+                    if len(texts) == 0: continue
+                    X_val_encode.append(model.embed(
+                      texts=texts,
                       model='embed-multilingual-v2.0',
                     ).embeddings)
-                for i in range(len(X_test)//bs+1):
-                    X_test_encode.append(self.model.embed(
-                      texts=X_test[(i*bs):((i+1)*bs)],
+                for i in trange(len(X_test)//bs+1):
+                    texts=X_test[(i*bs):((i+1)*bs)]
+                    if len(texts) == 0: continue
+                    X_test_encode.append(model.embed(
+                      texts=texts,
                       model='embed-multilingual-v2.0',
                     ).embeddings)
                 X_test_encode = np.concatenate(X_test_encode,0)
                 X_train_encode = np.concatenate(X_train_encode,0)
                 X_val_encode = np.concatenate(X_val_encode,0)
+            elif bge:
+                X_train_encode = model.encode(X_train,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
+                X_val_encode = model.encode(X_val,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
+                X_test_encode = model.encode(X_test,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
+
+                X_train_encode = X_train_encode['dense_vecs']
+                X_val_encode = X_val_encode['dense_vecs']
+                X_test_encode = X_test_encode['dense_vecs']
             else:
-                try:
-                    X_train_encode = self.model.encode(X_train,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
-                    X_val_encode = self.model.encode(X_val,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
-                    X_test_encode = self.model.encode(X_test,batch_size=12,return_dense=True, return_sparse=False, return_colbert_vecs=False)
-                except:
-                    X_train_encode = self.model.encode(X_train,batch_size=12)
-                    X_val_encode = self.model.encode(X_val,batch_size=12)
-                    X_test_encode = self.model.encode(X_test,batch_size=12)
-                if 'dense_vecs' in X_train_encode:
-                    X_train_encode = X_train_encode['dense_vecs']
-                    X_val_encode = X_val_encode['dense_vecs']
-                    X_test_encode = X_test_encode['dense_vecs']
-                
-            
-            text_clf = LinearSVC(class_weight='balanced')
+                X_train_encode = model.encode(X_train, batch_size=12, show_progress_bar=True)
+                # X_val_encode = model.encode(X_val, batch_size=12, show_progress_bar=True)
+                X_test_encode = model.encode(X_test, batch_size=12, show_progress_bar=True)
+
+            print("Training classification head...") 
+            text_clf = LinearSVC(class_weight='balanced', verbose=0)
             text_clf.fit(X_train_encode, y_train)
             
+            results[key] = {}
             if self.train_score:
-                print(f"Dataset: {key} Set: Train")
                 train_predicted = text_clf.predict(X_train_encode)
-                print(classification_report(y_train, train_predicted, digits=4))
-            if self.val_score:
-                print(f"Dataset: {key} Set: Validate")
-                val_predicted = text_clf.predict(X_val_encode)
-                print(classification_report(y_val, val_predicted, digits=4))
+                results[key]["train"] = classification_report(y_train, train_predicted, digits=4, output_dict=True)
+            # if self.val_score:
+            #     val_predicted = text_clf.predict(X_val_encode)
+            #     results[key]["val"] = classification_report(y_val, val_predicted, digits=4, output_dict=True)
             if self.test_score:
-                print(f"Dataset: {key} Set: Test")
                 test_predicted = text_clf.predict(X_test_encode)
-                print(classification_report(y_test, test_predicted, digits=4))
+                results[key]["test"] = classification_report(y_test, test_predicted, digits=4, output_dict=True)
             
-            print('*'*50)
+        return results
