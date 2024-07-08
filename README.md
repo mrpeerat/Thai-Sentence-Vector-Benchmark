@@ -95,7 +95,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 63.31  | 63.74  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 67.05  | 67.67  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 68.36  | 68.92  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 67.13  | 67.53  | :heavy_check_mark:
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 66.72  | 67.24  | :heavy_check_mark:
 
 ## Wongnai
 | Base Model  | Acc (*100) | F1 (*100, weighted) | Supervised? |
@@ -119,7 +119,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 37.76  | 40.07  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 45.20  | 46.72  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 51.94  | 52.68  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | xx.xx  | xx.xx  | :heavy_check_mark:
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 46.83  | 48.08  | :heavy_check_mark:
 
 
 ## Generated Review
@@ -144,7 +144,7 @@ We also consider other techniques (supervised and unsupervised methods) in this 
 | [distiluse-base-multilingual-cased-v2](https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2)  | 50.62  | 48.90  | :heavy_check_mark:
 | [paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2)  | 57.48  | 56.35  | :heavy_check_mark:
 | [BGE M-3](https://huggingface.co/BAAI/bge-m3)   | 59.53  | 58.35  | :heavy_check_mark:
-| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | xx.xx  | xx.xx  | :heavy_check_mark:
+| [Cohere-embed-multilingual-v2.0](https://cohere.com/embeddings)  | 57.91  | 56.60  | :heavy_check_mark:
 
 # Thai pair classification benchmark
 - We use [XNLI dev and test set](https://dl.fbaipublicfiles.com/XNLI/XNLI-1.0.zip). We drop neutral classes and change from contradiction => 0 and entailment =>1.
