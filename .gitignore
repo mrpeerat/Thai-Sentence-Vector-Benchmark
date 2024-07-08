@@ -15,3 +15,5 @@ STS_Evaluation/*-checkpoint*
 Transfer_Evaluation/.ipy*
 Transfer_Evaluation/*-checkpoint*
 Transfer_Evaluation/__py*
+
+.DS_Store
