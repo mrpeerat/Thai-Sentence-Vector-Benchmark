@@ -9,6 +9,28 @@ Our first preliminary results demonstrate that we can train a robust sentence re
 
 Moreover, we provide the Thai sentence vector benchmark. Our benchmark aims to evaluate the effectiveness of sentence embedding models on Thai zero-shot and transfer learning tasks. The tasks comprise of four tasks: [Semantic ranking on STS-B](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/STS_Evaluation), [text classification (transfer)](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/Transfer_Evaluation), [pair classification](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/PairClassification_Evaluation), and [retrieval question answering (QA)](https://github.com/mrpeerat/Thai-Sentence-Vector-Benchmark/tree/main/Retrieval_Evaluation). 
 
+# Install
+```
+conda create -n thai_sentence_vector_benchmark python==3.11.4
+conda activate thai_sentence_vector_benchmark
+
+# Select the appropriate PyTorch version based on your CUDA version
+# CUDA 11.8
+conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+# CUDA 12.1
+conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+# CPU Only
+conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 cpuonly -c pytorch
+
+pip install -e .
+```
+
+# Reproduce the results
+```
+python scripts/eval_all.py \
+--cohere_api_key <YOUR_COHERE_API_KEY> \
+--openai_api_key <YOUR_OPENAI_API_KEY>
+```
 
 # How do we train unsupervised sentence representation?
 We provide simple and effective sentence embedding methods that do not require supervised labels (unsupervised learning) as follows: 
