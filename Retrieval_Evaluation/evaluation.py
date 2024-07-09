@@ -223,7 +223,7 @@ if __name__ == "__main__":
     for model_name, model_path in tqdm(models_to_test.items()):
         print(f"Evaluating {model_name}...")
         # Load model
-        model = SentenceTransformer(model_name)
+        model = SentenceTransformer(model_path)
         if "WangchanBERTa" in model_name:
             model.max_seq_length = 416
         # Evaluate model
