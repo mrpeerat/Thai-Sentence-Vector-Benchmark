@@ -1,0 +1,10 @@
+tqdm
+pandas
+datasets
+sentencepiece
+sentence_transformers==2.6.0
+FlagEmbedding
+cohere
+tiktoken
+openai
+protobuf
