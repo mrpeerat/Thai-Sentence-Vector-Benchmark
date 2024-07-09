@@ -32,6 +32,16 @@ python scripts/eval_all.py \
 --openai_api_key <YOUR_OPENAI_API_KEY>
 ```
 
+# Usage
+```python
+from thai_sentence_vector_benchmark.models import SentenceTransformerModel
+from thai_sentence_vector_benchmark.benchmark import ThaiSentenceVectorBenchmark
+
+model = SentenceTransformerModel("FacebookAI/xlm-roberta-base")
+benchmark = ThaiSentenceVectorBenchmark()
+results = benchmark(model)
+```
+
 # How do we train unsupervised sentence representation?
 We provide simple and effective sentence embedding methods that do not require supervised labels (unsupervised learning) as follows: 
 
