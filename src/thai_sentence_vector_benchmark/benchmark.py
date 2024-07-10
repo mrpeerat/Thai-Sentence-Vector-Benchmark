@@ -27,8 +27,11 @@ class ThaiSentenceVectorBenchmark:
             print(f"Running {task} benchmark...")
             result = self.benchmarks[task](model, batch_size=batch_size)
             if task == "sts":
-                results["STS"] = {"Spearman_Correlation": result["spearman_cosine"]}
-                average_result.append(results["STS"]["Spearman_Correlation"])
+                results["STS"] = {dataset_name: {"Spearman_Correlation": value["Spearman_Correlation"]} for dataset_name, value in result.items()}
+                results["STS"]["Average"] = {
+                    "Spearman_Correlation": round(sum([value["Spearman_Correlation"] for value in results["STS"].values()]) / len(results["STS"]), 2)
+                }
+                average_result.append(results["STS"]["Average"]["Spearman_Correlation"])
             elif task == "text_classification":
                 results["Text_Classification"] = {dataset_name: {"Accuracy": value["Accuracy"], "F1": value["F1"]} for dataset_name, value in result.items()}
                 results["Text_Classification"]["Average"] = {
@@ -38,8 +41,11 @@ class ThaiSentenceVectorBenchmark:
                 average_result.append(results["Text_Classification"]["Average"]["Accuracy"])
                 average_result.append(results["Text_Classification"]["Average"]["F1"])
             elif task == "pair_classification":
-                results["Pair_Classification"] = {"AP": result["AP"]}
-                average_result.append(results["Pair_Classification"]["AP"])
+                results["Pair_Classification"] = {dataset_name: {"AP": value["AP"]} for dataset_name, value in result.items()}
+                results["Pair_Classification"]["Average"] = {
+                    "AP": round(sum([value["AP"] for value in results["Pair_Classification"].values()]) / len(results["Pair_Classification"]), 2)
+                }
+                average_result.append(results["Pair_Classification"]["Average"]["AP"])
             elif task == "retrieval":
                 results["Retrieval"] = {dataset_name: {"R@1": value["R@1"], "MRR@10": value["MRR@10"]} for dataset_name, value in result.items()}
                 results["Retrieval"]["Average"] = {

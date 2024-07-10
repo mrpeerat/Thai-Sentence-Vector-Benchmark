@@ -54,7 +54,7 @@ results = benchmark(model)
   "Pair_Classification": {
     "xnli": {"AP": float},
     "Average": {"AP": float},
-  }
+  },
   "Retrieval": {
     "xquad": {"R@1": float, "MRR@10": float},
     "miracl": {"R@1": float, "MRR@10": float},

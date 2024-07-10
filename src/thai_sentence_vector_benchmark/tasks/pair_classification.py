@@ -150,5 +150,5 @@ class PairClassificationBenchmark:
             batch_size: int = 1024,
     ):
         return {
-            "AP": round(self.cal_score(model, batch_size=batch_size)["cos_sim"]["ap"] * 100, 2),
+            "xnli": {"AP": round(self.cal_score(model, batch_size=batch_size)["cos_sim"]["ap"] * 100, 2)},
         }

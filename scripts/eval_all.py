@@ -59,9 +59,9 @@ if __name__ == "__main__":
         main_table = pd.DataFrame(
             {
                 model_name: {
-                "STS": str(result["STS"]["Spearman_Correlation"]),
+                "STS": str(result["STS"]["Average"]["Spearman_Correlation"]),
                 "Text_Classification": f'{result["Text_Classification"]["Average"]["Accuracy"]} / {result["Text_Classification"]["Average"]["F1"]}',
-                "Pair_Classification": str(result["Pair_Classification"]["AP"]),
+                "Pair_Classification": str(result["Pair_Classification"]["Average"]["AP"]),
                 "Retrieval": f'{result["Retrieval"]["Average"]["R@1"]} / {result["Retrieval"]["Average"]["MRR@10"]}',
                 "Average": str(result["Average"]),
                 }

@@ -24,5 +24,5 @@ class STSBenchmark:
         cosine_scores = 1 - (paired_cosine_distances(text_1_embeds, text_2_embeds))
         eval_spearman_cosine, _ = spearmanr(self.labels, cosine_scores)
         return {
-            "spearman_cosine": round(eval_spearman_cosine * 100, 2),
+            "sts_b": {"Spearman_Correlation": round(eval_spearman_cosine * 100, 2)},
         }
