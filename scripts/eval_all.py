@@ -1,8 +1,9 @@
 import os
 import argparse
 import pandas as pd
+from sentence_transformers import SentenceTransformer
 from thai_sentence_vector_benchmark.benchmark import ThaiSentenceVectorBenchmark
-from thai_sentence_vector_benchmark.models import SentenceTransformerModel, BGEModel, CohereV2Model, CohereV3Model, OpenAIModel
+from thai_sentence_vector_benchmark.models import BGEModel, CohereV2Model, CohereV3Model, OpenAIModel
 
 
 if __name__ == "__main__":
@@ -52,7 +53,9 @@ if __name__ == "__main__":
         elif model_name == "Openai-text-embedding-3-large" and args.openai_api_key is not None:
             model = OpenAIModel(model_path, api_key=args.openai_api_key)
         else:
-            model = SentenceTransformerModel(model_path)
+            model = SentenceTransformer(model_path)
+            if model_name == "WangchanBERTa":
+                model.max_seq_length = 416
         results[model_name] = benchmark(model, batch_size=args.batch_size)
 
         # Save main results to csv

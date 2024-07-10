@@ -34,10 +34,10 @@ python scripts/eval_all.py \
 
 # Usage
 ```python
-from thai_sentence_vector_benchmark.models import SentenceTransformerModel
+from sentence_transformers import SentenceTransformer
 from thai_sentence_vector_benchmark.benchmark import ThaiSentenceVectorBenchmark
 
-model = SentenceTransformerModel("FacebookAI/xlm-roberta-base")
+model = SentenceTransformer("FacebookAI/xlm-roberta-base")
 benchmark = ThaiSentenceVectorBenchmark()
 results = benchmark(model)
 >> {
