@@ -32,8 +32,8 @@ class ThaiSentenceVectorBenchmark:
             elif task == "text_classification":
                 results["Text_Classification"] = {dataset_name: {"Accuracy": value["Accuracy"], "F1": value["F1"]} for dataset_name, value in result.items()}
                 results["Text_Classification"]["Average"] = {
-                    "Accuracy": round(sum([value["Accuracy"] for value in results["Text_Classification"].values()]) / len(results["Text_Classification"]) * 100, 2),
-                    "F1": round(sum([value["F1"] for value in results["Text_Classification"].values()]) / len(results["Text_Classification"]) * 100, 2),
+                    "Accuracy": round(sum([value["Accuracy"] for value in results["Text_Classification"].values()]) / len(results["Text_Classification"]), 2),
+                    "F1": round(sum([value["F1"] for value in results["Text_Classification"].values()]) / len(results["Text_Classification"]), 2),
                 }
                 average_result.append(results["Text_Classification"]["Average"]["Accuracy"])
                 average_result.append(results["Text_Classification"]["Average"]["F1"])
@@ -43,8 +43,8 @@ class ThaiSentenceVectorBenchmark:
             elif task == "retrieval":
                 results["Retrieval"] = {dataset_name: {"R@1": value["R@1"], "MRR@10": value["MRR@10"]} for dataset_name, value in result.items()}
                 results["Retrieval"]["Average"] = {
-                    "R@1": round(sum([value["R@1"] for value in results["Retrieval"].values()]) / len(results["Retrieval"]) * 100, 2),
-                    "MRR@10": round(sum([value["MRR@10"] for value in results["Retrieval"].values()]) / len(results["Retrieval"]) * 100, 2),
+                    "R@1": round(sum([value["R@1"] for value in results["Retrieval"].values()]) / len(results["Retrieval"]), 2),
+                    "MRR@10": round(sum([value["MRR@10"] for value in results["Retrieval"].values()]) / len(results["Retrieval"]), 2),
                 }
                 average_result.append(results["Retrieval"]["Average"]["R@1"])
                 average_result.append(results["Retrieval"]["Average"]["MRR@10"])
