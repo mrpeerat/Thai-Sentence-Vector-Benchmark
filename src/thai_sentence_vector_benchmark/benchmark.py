@@ -20,12 +20,12 @@ class ThaiSentenceVectorBenchmark:
             elif task == "text_classification":
                 self.benchmarks[task] = TextClassificationBenchmark()
 
-    def __call__(self, model: SentenceEncodingModel) -> Dict:
+    def __call__(self, model: SentenceEncodingModel, batch_size: int = 1024) -> Dict:
         results = {}
         average_result = []
         for task in self.tasks:
             print(f"Running {task} benchmark...")
-            result = self.benchmarks[task](model)
+            result = self.benchmarks[task](model, batch_size=batch_size)
             if task == "sts":
                 results["STS"] = {"Spearman_Correlation": result["spearman_cosine"]}
                 average_result.append(results["STS"]["Spearman_Correlation"])

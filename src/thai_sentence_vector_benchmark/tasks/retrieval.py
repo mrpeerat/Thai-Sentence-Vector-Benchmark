@@ -18,7 +18,7 @@ class RetrievalBenchmark:
             elif dataset_name == "tydiqa":
                 self.datasets[dataset_name] = datasets.load_dataset("chompk/tydiqa-goldp-th", trust_remote_code=True)
 
-    def eval_xquad(self, model: SentenceEncodingModel):
+    def eval_xquad(self, model: SentenceEncodingModel, batch_size: int = 1024):
         dataset = self.datasets["xquad"]
 
         all_doc = set(dataset['validation']['context'])
@@ -34,10 +34,10 @@ class RetrievalBenchmark:
         df_document = pd.DataFrame(zip(list(all_doc.values()), list(all_doc.keys())), columns=['doc_id', 'document'])
 
         context_id = df_document['doc_id'].to_list()    
-        context_all = model.encode(df_document['document'].to_list(), normalize_embeddings=True, show_progress_bar=True)
+        context_all = model.encode(df_document['document'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         question_id = df_question['doc_id'].to_list()
-        question_all = model.encode(df_question['question'].to_list(), normalize_embeddings=True, show_progress_bar=True)
+        question_all = model.encode(df_question['question'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         sim_score = np.inner(question_all, context_all)
 
@@ -73,7 +73,7 @@ class RetrievalBenchmark:
             "MRR@10": mrr_score,
         }
 
-    def eval_miracl(self, model: SentenceEncodingModel):
+    def eval_miracl(self, model: SentenceEncodingModel, batch_size: int = 1024):
         dataset = self.datasets["miracl"]
 
         queries = []
@@ -91,9 +91,9 @@ class RetrievalBenchmark:
             docs += [x['text'] for x in negative_passages]
         docs = list(set(docs))  
 
-        doc_embeddings = model.encode(docs, normalize_embeddings=True, show_progress_bar=True)
+        doc_embeddings = model.encode(docs, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
-        question_embeddings = model.encode(queries, normalize_embeddings=True, show_progress_bar=True)
+        question_embeddings = model.encode(queries, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         sim_score = np.inner(question_embeddings, doc_embeddings)
 
@@ -129,7 +129,7 @@ class RetrievalBenchmark:
             "MRR@10": mrr_score,
         }
 
-    def eval_tydiqa(self, model: SentenceEncodingModel):
+    def eval_tydiqa(self, model: SentenceEncodingModel, batch_size: int = 1024):
         dataset = self.datasets["tydiqa"]
 
         all_doc = set(dataset['validation']['context'])
@@ -145,10 +145,10 @@ class RetrievalBenchmark:
         df_document = pd.DataFrame(zip(list(all_doc.values()), list(all_doc.keys())), columns=['doc_id', 'document'])
 
         context_id = df_document['doc_id'].to_list()    
-        context_all = model.encode(df_document['document'].to_list(), normalize_embeddings=True, show_progress_bar=True)
+        context_all = model.encode(df_document['document'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         question_id = df_question['doc_id'].to_list()
-        question_all = model.encode(df_question['question'].to_list(), normalize_embeddings=True, show_progress_bar=True)
+        question_all = model.encode(df_question['question'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         sim_score = np.inner(question_all,context_all)
 
@@ -187,13 +187,14 @@ class RetrievalBenchmark:
     def __call__(
             self, 
             model: SentenceEncodingModel,
+            batch_size: int = 1024,
     ):
         results = {}
         for dataset_name in self.dataset_names:
             if dataset_name == "xquad":
-                results[dataset_name] = {k: round(v * 100, 2) for k, v in self.eval_xquad(model).items()}
+                results[dataset_name] = {k: round(v * 100, 2) for k, v in self.eval_xquad(model, batch_size=batch_size).items()}
             elif dataset_name == "miracl":
-                results[dataset_name] = {k: round(v * 100, 2) for k, v in self.eval_miracl(model).items()}
+                results[dataset_name] = {k: round(v * 100, 2) for k, v in self.eval_miracl(model, batch_size=batch_size).items()}
             elif dataset_name == "tydiqa":
-                results[dataset_name] = {k: round(v * 100, 2) for k, v in self.eval_tydiqa(model).items()}
+                results[dataset_name] = {k: round(v * 100, 2) for k, v in self.eval_tydiqa(model, batch_size=batch_size).items()}
         return results

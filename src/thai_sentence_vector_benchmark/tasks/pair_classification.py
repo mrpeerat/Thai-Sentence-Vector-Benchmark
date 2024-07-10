@@ -104,7 +104,7 @@ class PairClassificationBenchmark:
             "ap": ap,
         }
 
-    def compute_metrics(self, model: SentenceEncodingModel):
+    def compute_metrics(self, model: SentenceEncodingModel, batch_size: int = 1024):
         sentence1, sentence2, labels = zip(*self.dataset)
         sentences1 = list(sentence1)
         sentences2 = list(sentence2)
@@ -112,7 +112,7 @@ class PairClassificationBenchmark:
         
         sentences = list(set(sentences1 + sentences2))
             
-        embeddings = np.asarray(model.encode(sentences, show_progress_bar=True))
+        embeddings = np.asarray(model.encode(sentences, batch_size=batch_size, show_progress_bar=True))
         emb_dict = {sent: emb for sent, emb in zip(sentences, embeddings)}
         embeddings1 = [emb_dict[sent] for sent in sentences1]
         embeddings2 = [emb_dict[sent] for sent in sentences2]
@@ -137,8 +137,8 @@ class PairClassificationBenchmark:
 
         return output_scores
 
-    def cal_score(self, model: SentenceEncodingModel):
-        scores = self.compute_metrics(model)
+    def cal_score(self, model: SentenceEncodingModel, batch_size: int = 1024):
+        scores = self.compute_metrics(model, batch_size=batch_size)
         # Main score is the max of Average Precision (AP)
         main_score = max(scores[short_name]["ap"] for short_name in scores)
         scores["main_score"] = main_score
@@ -147,7 +147,8 @@ class PairClassificationBenchmark:
     def __call__(
             self, 
             model: SentenceEncodingModel,
+            batch_size: int = 1024,
     ):
         return {
-            "AP": round(self.cal_score(model)["cos_sim"]["ap"] * 100, 2),
+            "AP": round(self.cal_score(model, batch_size=batch_size)["cos_sim"]["ap"] * 100, 2),
         }

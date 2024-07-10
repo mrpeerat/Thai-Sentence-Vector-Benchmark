@@ -10,7 +10,7 @@ class BGEModel(SentenceEncodingModel):
         self.model_name = model_name
         self.model = BGEM3FlagModel(model_name,  use_fp16=use_fp16) 
 
-    def encode(self, texts: List[str], batch_size: int = 64, show_progress_bar: bool = False, **kwargs):
+    def encode(self, texts: List[str], batch_size: int = 1024, show_progress_bar: bool = False, **kwargs):
         embeds = []
         for i in trange(len(texts) // batch_size + 1, disable=not show_progress_bar):
             embed = self.model.encode(

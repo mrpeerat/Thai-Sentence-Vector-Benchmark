@@ -9,7 +9,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--cohere_api_key", type=str, default=None)
     parser.add_argument("--openai_api_key", type=str, default=None)
+    parser.add_argument("--batch_size", type=int, default=1024)
     args = parser.parse_args()
+
+    os.makedirs("./results", exist_ok=True)
 
     models_to_evaluate = {
         "XLMR": "FacebookAI/xlm-roberta-base",
@@ -50,40 +53,38 @@ if __name__ == "__main__":
             model = OpenAIModel(model_path, api_key=args.openai_api_key)
         else:
             model = SentenceTransformerModel(model_path)
-        results[model_name] = benchmark(model)
+        results[model_name] = benchmark(model, batch_size=args.batch_size)
 
-    os.makedirs("./results", exist_ok=True)
+        # Save main results to csv
+        main_table = pd.DataFrame(
+            {
+                model_name: {
+                "STS": str(result["STS"]["Spearman_Correlation"]),
+                "Text_Classification": f'{result["Text_Classification"]["Average"]["Accuracy"]} / {result["Text_Classification"]["Average"]["F1"]}',
+                "Pair_Classification": str(result["Pair_Classification"]["AP"]),
+                "Retrieval": f'{result["Retrieval"]["Average"]["R@1"]} / {result["Retrieval"]["Average"]["MRR@10"]}',
+                "Average": str(result["Average"]),
+                }
+            } for model_name, result in results.items()
+        )
+        main_table.to_csv("./results/main_results.csv", index=False)
 
-    # Save main results to csv
-    main_table = pd.DataFrame(
-        {
-            model_name: {
-            "STS": str(result["STS"]["Spearman_Correlation"]),
-            "Text_Classification": f'{result["Text_Classification"]["Average"]["Accuracy"]} / {result["Text_Classification"]["Average"]["F1"]}',
-            "Pair_Classification": str(result["Pair_Classification"]["AP"]),
-            "Retrieval": f'{result["Retrieval"]["Average"]["R@1"]} / {result["Retrieval"]["Average"]["MRR@10"]}',
-            "Average": str(result["Average"]),
-            }
-        } for model_name, result in results.items()
-    )
-    main_table.to_csv("./results/main_results.csv", index=False)
+        # Save text classification results to csv
+        text_classification_table = pd.DataFrame(
+            {
+                model_name: {
+                    dataset_name: f'{value["Accuracy"]} / {value["F1"]}' for dataset_name, value in result["Text_Classification"].items()
+                }
+            } for model_name, result in results.items()
+        )
+        text_classification_table.to_csv("./results/text_classification_results.csv", index=False)
 
-    # Save text classification results to csv
-    text_classification_table = pd.DataFrame(
-        {
-            model_name: {
-                dataset_name: f'{value["Accuracy"]} / {value["F1"]}' for dataset_name, value in result["Text_Classification"].items()
-            }
-        } for model_name, result in results.items()
-    )
-    text_classification_table.to_csv("./results/text_classification_results.csv", index=False)
-
-    # Save retrieval results to csv
-    retrieval_table = pd.DataFrame(
-        {
-            model_name: {
-                dataset_name: f'{value["R@1"]} / {value["MRR@10"]}' for dataset_name, value in result["Retrieval"].items()
-            }
-        } for model_name, result in results.items()
-    )
-    retrieval_table.to_csv("./results/retrieval_results.csv", index=False)
+        # Save retrieval results to csv
+        retrieval_table = pd.DataFrame(
+            {
+                model_name: {
+                    dataset_name: f'{value["R@1"]} / {value["MRR@10"]}' for dataset_name, value in result["Retrieval"].items()
+                }
+            } for model_name, result in results.items()
+        )
+        retrieval_table.to_csv("./results/retrieval_results.csv", index=False)

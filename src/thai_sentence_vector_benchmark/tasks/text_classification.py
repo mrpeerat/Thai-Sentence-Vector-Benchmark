@@ -52,6 +52,7 @@ class TextClassificationBenchmark:
     def __call__(
             self, 
             model: SentenceEncodingModel,
+            batch_size: int = 1024,
     ):
         results = {}
         for dataset_name in self.dataset_names:
@@ -64,12 +65,12 @@ class TextClassificationBenchmark:
 
             # Train classification head
             print("Training classification head...") 
-            train_embeds = model.encode(X_train, show_progress_bar=True)
+            train_embeds = model.encode(X_train, batch_size=batch_size, show_progress_bar=True)
             text_clf = LinearSVC(class_weight='balanced', verbose=0)
             text_clf.fit(train_embeds, y_train)
 
             # Evaluate
-            test_embeds = model.encode(X_test, show_progress_bar=True)
+            test_embeds = model.encode(X_test, batch_size=batch_size, show_progress_bar=True)
             test_predicted = text_clf.predict(test_embeds)
             result = classification_report(y_test, test_predicted, output_dict=True)
             results[dataset_name] = {
