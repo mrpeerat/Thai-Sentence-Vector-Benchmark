@@ -40,6 +40,29 @@ from thai_sentence_vector_benchmark.benchmark import ThaiSentenceVectorBenchmark
 model = SentenceTransformerModel("FacebookAI/xlm-roberta-base")
 benchmark = ThaiSentenceVectorBenchmark()
 results = benchmark(model)
+>> {
+  "STS": {
+    "sts_b": {"Spearman_Correlation": float},
+    "Average": {"Spearman_Correlation": float},
+  },
+  "Text_Classification": {
+    "wisesight": {"Accuracy": float, "F1": float},
+    "wongnai": {"Accuracy": float, "F1": float},
+    "generated_reviews": {"Accuracy": float, "F1": float},
+    "Average": {"Accuracy": float, "F1": float},
+  },
+  "Pair_Classification": {
+    "xnli": {"AP": float},
+    "Average": {"AP": float},
+  }
+  "Retrieval": {
+    "xquad": {"R@1": float, "MRR@10": float},
+    "miracl": {"R@1": float, "MRR@10": float},
+    "tydiqa": {"R@1": float, "MRR@10": float},
+    "Average": {"R@1": float, "MRR@10": float},
+  },
+  "Average": float,
+}
 ```
 
 # How do we train unsupervised sentence representation?
