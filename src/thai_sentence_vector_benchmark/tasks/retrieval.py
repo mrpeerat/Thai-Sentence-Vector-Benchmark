@@ -34,10 +34,10 @@ class RetrievalBenchmark:
         df_document = pd.DataFrame(zip(list(all_doc.values()), list(all_doc.keys())), columns=['doc_id', 'document'])
 
         context_id = df_document['doc_id'].to_list()    
-        context_all = model.encode(df_document['document'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        context_all = model.encode(df_document['document'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True, input_type="search_document")
 
         question_id = df_question['doc_id'].to_list()
-        question_all = model.encode(df_question['question'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        question_all = model.encode(df_question['question'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True, input_type="search_query")
 
         sim_score = np.inner(question_all, context_all)
 
@@ -91,9 +91,9 @@ class RetrievalBenchmark:
             docs += [x['text'] for x in negative_passages]
         docs = list(set(docs))  
 
-        doc_embeddings = model.encode(docs, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        doc_embeddings = model.encode(docs, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True, input_type="search_document")
 
-        question_embeddings = model.encode(queries, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        question_embeddings = model.encode(queries, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True, input_type="search_query")
 
         sim_score = np.inner(question_embeddings, doc_embeddings)
 
@@ -145,10 +145,10 @@ class RetrievalBenchmark:
         df_document = pd.DataFrame(zip(list(all_doc.values()), list(all_doc.keys())), columns=['doc_id', 'document'])
 
         context_id = df_document['doc_id'].to_list()    
-        context_all = model.encode(df_document['document'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        context_all = model.encode(df_document['document'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True, input_type="search_document")
 
         question_id = df_question['doc_id'].to_list()
-        question_all = model.encode(df_question['question'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        question_all = model.encode(df_question['question'].to_list(), batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True, input_type="search_query")
 
         sim_score = np.inner(question_all,context_all)
 

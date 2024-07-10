@@ -1,6 +1,4 @@
-import numpy as np
 from typing import List
-from tqdm import trange
 from FlagEmbedding import BGEM3FlagModel
 from thai_sentence_vector_benchmark.models.baseclass import SentenceEncodingModel
 
