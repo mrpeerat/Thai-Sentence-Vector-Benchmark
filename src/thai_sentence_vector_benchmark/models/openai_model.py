@@ -17,7 +17,7 @@ class OpenAIModel(SentenceEncodingModel):
     def encode(self, texts: List[str], batch_size: int = 1024, show_progress_bar: bool = False, **kwargs):
         embeds = []
         for i in trange(len(texts) // batch_size + 1, disable=not show_progress_bar):
-            batch = texts[i : i + batch_size]
+            batch = texts[i * batch_size : (i + 1) * batch_size]
             # Limit input sequence length to not exceed 8192 tokens
             tokens = self.encoding.encode_batch(batch)
             batch = [token[:self.max_seq_length] for token in tokens]
@@ -25,4 +25,4 @@ class OpenAIModel(SentenceEncodingModel):
                 [d.embedding for d in self.client.embeddings.create(input=batch, model=self.model_name).data]
             )
             embeds.append(embed)
-        return np.concatenate(embeds)
+        return np.concatenate(embeds, axis=0)
