@@ -54,7 +54,7 @@ class ThaiSentenceVectorBenchmark:
                 }
                 average_result.append(results["Retrieval"]["Average"]["R@1"])
                 average_result.append(results["Retrieval"]["Average"]["MRR@10"])
-            results["Average"] = sum(average_result) / len(average_result)
+            results["Average"] = round(sum(average_result) / len(average_result), 2)
             print(f"{task} benchmark done.")
             print(result)
             print("-" * 100)
