@@ -79,7 +79,7 @@ class RetrievalBenchmark:
         queries = []
         answers = []
         docs = []
-        for data in dataset['dev']: 
+        for data in dataset['testA']: 
             query = data['query']
             positive_passages = data['positive_passages']
             negative_passages = data['negative_passages']

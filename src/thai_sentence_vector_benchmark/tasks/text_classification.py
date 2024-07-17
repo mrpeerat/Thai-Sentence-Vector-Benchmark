@@ -23,10 +23,13 @@ class TextClassificationBenchmark:
 
         X_train = dataset['train']['texts']
         y_train = dataset['train']['category']
+
+        X_val = dataset['validation']['texts']
+        y_val = dataset['validation']['category']
         
         X_test = dataset['test']['texts']
         y_test = dataset['test']['category']
-        return X_train, y_train, X_test, y_test
+        return X_train, y_train, X_val, y_val, X_test, y_test
 
     def get_wongnai_dataset(self):
         dataset = self.datasets["wongnai"]
@@ -37,7 +40,7 @@ class TextClassificationBenchmark:
         
         X_test = dataset['test']['review_body']
         y_test = dataset['test']['star_rating']
-        return X_train, y_train, X_test, y_test
+        return X_train, y_train, X_val, y_val, X_test, y_test
 
     def get_generated_reviews_dataset(self):
         dataset = self.datasets["generated_reviews"]
@@ -45,9 +48,12 @@ class TextClassificationBenchmark:
         X_train = [text['th'] for text in dataset['train']['translation']]
         y_train = dataset['train']['review_star']
         
+        X_val = [text['th'] for text in dataset['validation']['translation']]
+        y_val = dataset['validation']['review_star']
+        
         X_test = [text['th'] for text in dataset['test']['translation']]
         y_test = dataset['test']['review_star']
-        return X_train, y_train, X_test, y_test
+        return X_train, y_train, X_val, y_val, X_test, y_test
 
     def __call__(
             self, 
@@ -57,11 +63,11 @@ class TextClassificationBenchmark:
         results = {}
         for dataset_name in self.dataset_names:
             if dataset_name == "wisesight":
-                X_train, y_train, X_test, y_test = self.get_wisesight_dataset()
+                X_train, y_train, _, _, X_test, y_test = self.get_wisesight_dataset()
             elif dataset_name == "wongnai":
-                X_train, y_train, X_test, y_test = self.get_wongnai_dataset()
+                X_train, y_train, _, _, X_test, y_test = self.get_wongnai_dataset()
             elif dataset_name == "generated_reviews":
-                X_train, y_train, X_test, y_test = self.get_generated_reviews_dataset()
+                X_train, y_train, _, _, X_test, y_test = self.get_generated_reviews_dataset()
 
             # Train classification head
             print("Training classification head...") 
