@@ -1,4 +1,5 @@
 import datasets
+from time import time
 from typing import List
 from sklearn.svm import LinearSVC
 from sklearn.metrics import classification_report
@@ -70,10 +71,12 @@ class TextClassificationBenchmark:
                 X_train, y_train, _, _, X_test, y_test = self.get_generated_reviews_dataset()
 
             # Train classification head
-            print("Training classification head...") 
             train_embeds = model.encode(X_train, batch_size=batch_size, show_progress_bar=True)
             text_clf = LinearSVC(class_weight='balanced', verbose=0)
+            print("Training classification head...") 
+            init_time = time()
             text_clf.fit(train_embeds, y_train)
+            print(f"Training time: {time() - init_time:.2f}s")
 
             # Evaluate
             test_embeds = model.encode(X_test, batch_size=batch_size, show_progress_bar=True)
