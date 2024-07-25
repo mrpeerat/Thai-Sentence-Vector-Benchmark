@@ -1,7 +1,7 @@
 import datasets
 from time import time
-from typing import List
 from sklearn.svm import LinearSVC
+from typing import List, Optional
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 from thai_sentence_vector_benchmark.models.baseclass import SentenceEncodingModel
@@ -59,6 +59,7 @@ class TextClassificationBenchmark:
     def __call__(
             self, 
             model: SentenceEncodingModel,
+            prompt: Optional[str] = None,
             batch_size: int = 1024,
     ):
         results = {}
@@ -71,7 +72,7 @@ class TextClassificationBenchmark:
                 X_train, y_train, _, _, X_test, y_test = self.get_generated_reviews_dataset()
 
             # Train classification head
-            train_embeds = model.encode(X_train, batch_size=batch_size, show_progress_bar=True)
+            train_embeds = model.encode(X_train, prompt=prompt, batch_size=batch_size, show_progress_bar=True)
             text_clf = LinearSVC(class_weight='balanced', verbose=0)
             print("Training classification head...") 
             init_time = time()
@@ -79,7 +80,7 @@ class TextClassificationBenchmark:
             print(f"Training time: {time() - init_time:.2f}s")
 
             # Evaluate
-            test_embeds = model.encode(X_test, batch_size=batch_size, show_progress_bar=True)
+            test_embeds = model.encode(X_test, prompt=prompt, batch_size=batch_size, show_progress_bar=True)
             test_predicted = text_clf.predict(test_embeds)
             result = classification_report(y_test, test_predicted, output_dict=True)
             results[dataset_name] = {

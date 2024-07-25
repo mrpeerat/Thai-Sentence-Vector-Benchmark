@@ -37,9 +37,17 @@ python scripts/eval_all.py \
 from sentence_transformers import SentenceTransformer
 from thai_sentence_vector_benchmark.benchmark import ThaiSentenceVectorBenchmark
 
-model = SentenceTransformer("FacebookAI/xlm-roberta-base")
+model = SentenceTransformer("intfloat/e5-mistral-7b-instruct")
 benchmark = ThaiSentenceVectorBenchmark()
-results = benchmark(model)
+results = benchmark(
+  model,
+  task_prompts={
+    "sts": "Instruct: Retrieve semantically similar text.\nQuery: ",
+    "retrieval": "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: ",
+    "pair_classification": "Instruct: Retrieve parallel sentences.\nQuery: ",
+    "text_classification": "Instruct: Classify the sentiment of the text.\nText: ",
+  }
+)
 >> {
   "STS": {
     "sts_b": {"Spearman_Correlation": float},

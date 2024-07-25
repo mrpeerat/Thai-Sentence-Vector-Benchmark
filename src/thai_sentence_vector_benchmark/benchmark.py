@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Optional
 from thai_sentence_vector_benchmark.tasks.sts import STSBenchmark
 from thai_sentence_vector_benchmark.tasks.retrieval import RetrievalBenchmark
 from thai_sentence_vector_benchmark.models.baseclass import SentenceEncodingModel
@@ -7,8 +7,12 @@ from thai_sentence_vector_benchmark.tasks.text_classification import TextClassif
 
 
 class ThaiSentenceVectorBenchmark:
-    def __init__(self, task_names: List[str] = ("sts", "text_classification", "pair_classification", "retrieval")):
+    def __init__(
+            self, 
+            task_names: List[str] = ("sts", "text_classification", "pair_classification", "retrieval"),
+    ):
         self.task_names = task_names
+
         self.tasks = {}
         for task_name in self.task_names:
             if task_name == "sts":
@@ -20,12 +24,18 @@ class ThaiSentenceVectorBenchmark:
             elif task_name == "text_classification":
                 self.tasks[task_name] = TextClassificationBenchmark()
 
-    def __call__(self, model: SentenceEncodingModel, batch_size: int = 1024) -> Dict:
+    def __call__(
+            self, 
+            model: SentenceEncodingModel, 
+            task_prompts: Optional[Dict] = None,
+            batch_size: int = 1024,
+    ) -> Dict:
         results = {}
         average_result = []
         for task_name in self.task_names:
             print(f"Running {task_name} benchmark...")
-            result = self.tasks[task_name](model, batch_size=batch_size)
+            prompt = task_prompts[task_name] if task_prompts is not None else None
+            result = self.tasks[task_name](model, prompt=prompt, batch_size=batch_size)
             if task_name == "sts":
                 results["STS"] = {dataset_name: {"Spearman_Correlation": value["Spearman_Correlation"]} for dataset_name, value in result.items()}
                 results["STS"]["Average"] = {

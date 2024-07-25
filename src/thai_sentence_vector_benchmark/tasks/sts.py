@@ -1,8 +1,8 @@
 import pandas as pd
+from typing import Optional
 from scipy.stats import spearmanr
 from sklearn.metrics.pairwise import paired_cosine_distances
 from thai_sentence_vector_benchmark.models.baseclass import SentenceEncodingModel
-
 
 
 class STSBenchmark:
@@ -17,10 +17,11 @@ class STSBenchmark:
     def __call__(
             self, 
             model: SentenceEncodingModel,
+            prompt: Optional[str] = None,
             batch_size: int = 1024,
     ):
-        text_1_embeds = model.encode(self.texts_1, batch_size=batch_size, show_progress_bar=True)
-        text_2_embeds = model.encode(self.texts_2, batch_size=batch_size, show_progress_bar=True)
+        text_1_embeds = model.encode(self.texts_1, prompt=prompt, batch_size=batch_size, show_progress_bar=True)
+        text_2_embeds = model.encode(self.texts_2, prompt=prompt, batch_size=batch_size, show_progress_bar=True)
         cosine_scores = 1 - (paired_cosine_distances(text_1_embeds, text_2_embeds))
         eval_spearman_cosine, _ = spearmanr(self.labels, cosine_scores)
         return {

@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from typing import Optional
 from thai_sentence_vector_benchmark.models.baseclass import SentenceEncodingModel
 from sklearn.metrics import average_precision_score
 from sklearn.metrics.pairwise import (
@@ -7,7 +8,6 @@ from sklearn.metrics.pairwise import (
     paired_euclidean_distances,
     paired_manhattan_distances,
 )
-
 
 
 class PairClassificationBenchmark:
@@ -104,18 +104,14 @@ class PairClassificationBenchmark:
             "ap": ap,
         }
 
-    def compute_metrics(self, model: SentenceEncodingModel, batch_size: int = 1024):
+    def compute_metrics(self, model: SentenceEncodingModel, prompt: Optional[str] = None, batch_size: int = 1024):
         sentence1, sentence2, labels = zip(*self.dataset)
         sentences1 = list(sentence1)
         sentences2 = list(sentence2)
         labels = [int(x) for x in labels]
-        
-        sentences = list(set(sentences1 + sentences2))
-            
-        embeddings = np.asarray(model.encode(sentences, batch_size=batch_size, show_progress_bar=True))
-        emb_dict = {sent: emb for sent, emb in zip(sentences, embeddings)}
-        embeddings1 = [emb_dict[sent] for sent in sentences1]
-        embeddings2 = [emb_dict[sent] for sent in sentences2]
+
+        embeddings1 = np.asarray(model.encode(sentences1, prompt=prompt, batch_size=batch_size, show_progress_bar=True))
+        embeddings2 = np.asarray(model.encode(sentences2, prompt=prompt, batch_size=batch_size, show_progress_bar=True))
         
         cosine_scores = 1 - paired_cosine_distances(embeddings1, embeddings2)
         manhattan_distances = paired_manhattan_distances(embeddings1, embeddings2)
@@ -137,8 +133,8 @@ class PairClassificationBenchmark:
 
         return output_scores
 
-    def cal_score(self, model: SentenceEncodingModel, batch_size: int = 1024):
-        scores = self.compute_metrics(model, batch_size=batch_size)
+    def cal_score(self, model: SentenceEncodingModel, prompt: Optional[str] = None, batch_size: int = 1024):
+        scores = self.compute_metrics(model, prompt=prompt, batch_size=batch_size)
         # Main score is the max of Average Precision (AP)
         main_score = max(scores[short_name]["ap"] for short_name in scores)
         scores["main_score"] = main_score
@@ -147,8 +143,9 @@ class PairClassificationBenchmark:
     def __call__(
             self, 
             model: SentenceEncodingModel,
+            prompt: Optional[str] = None,
             batch_size: int = 1024,
     ):
         return {
-            "xnli": {"AP": round(self.cal_score(model, batch_size=batch_size)["cos_sim"]["ap"] * 100, 2)},
+            "xnli": {"AP": round(self.cal_score(model, prompt=prompt, batch_size=batch_size)["cos_sim"]["ap"] * 100, 2)},
         }
