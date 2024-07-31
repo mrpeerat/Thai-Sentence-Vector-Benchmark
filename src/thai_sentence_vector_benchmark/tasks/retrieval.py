@@ -33,7 +33,7 @@ class RetrievalBenchmark:
         df_document = pd.DataFrame(zip(list(all_doc.values()), list(all_doc.keys())), columns=['doc_id', 'document'])
 
         context_id = df_document['doc_id'].to_list()    
-        context_all = model.encode(df_document['document'].to_list(), prompt=prompt, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        context_all = model.encode(df_document['document'].to_list(), prompt=None, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         question_id = df_question['doc_id'].to_list()
         question_all = model.encode(df_question['question'].to_list(), prompt=prompt, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
@@ -90,7 +90,7 @@ class RetrievalBenchmark:
             docs += [x['text'] for x in negative_passages]
         docs = list(set(docs))  
 
-        doc_embeddings = model.encode(docs, prompt=prompt, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        doc_embeddings = model.encode(docs, prompt=None, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         question_embeddings = model.encode(queries, prompt=prompt, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
@@ -144,7 +144,7 @@ class RetrievalBenchmark:
         df_document = pd.DataFrame(zip(list(all_doc.values()), list(all_doc.keys())), columns=['doc_id', 'document'])
 
         context_id = df_document['doc_id'].to_list()    
-        context_all = model.encode(df_document['document'].to_list(), prompt=prompt, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
+        context_all = model.encode(df_document['document'].to_list(), prompt=None, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
 
         question_id = df_question['doc_id'].to_list()
         question_all = model.encode(df_question['question'].to_list(), prompt=prompt, batch_size=batch_size, normalize_embeddings=True, show_progress_bar=True)
