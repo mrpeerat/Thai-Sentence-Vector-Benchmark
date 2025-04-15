@@ -8,7 +8,24 @@ from thai_sentence_vector_benchmark.models.baseclass import SentenceEncodingMode
 
 
 class TextClassificationBenchmark:
-    def __init__(self, dataset_names: List[str] = ("wisesight", "wongnai", "generated_reviews")):
+    def __init__(self, dataset_names: List[str] = (
+                                                    "wisesight", 
+                                                    "wongnai", 
+                                                    "generated_reviews",
+                                                    "cyberbullying-lgbt",
+                                                    "depression",
+                                                    "emoji",
+                                                    "general-amy",
+                                                    "krathu500",
+                                                    "limesoda",
+                                                    "massive-intent",
+                                                    "massive-scenario",
+                                                    "multilingual-sentiment",
+                                                    "review-shopping",
+                                                    "sib200",
+                                                    "sea-translationese-resampled",
+                                                    "tcas61",
+                                                    "the40thai-children-stories")):
         self.dataset_names = dataset_names
         self.datasets = {}
         for dataset_name in self.dataset_names:
@@ -18,6 +35,12 @@ class TextClassificationBenchmark:
                 self.datasets[dataset_name] = datasets.load_dataset("wongnai_reviews")
             elif dataset_name == "generated_reviews":
                 self.datasets[dataset_name] = datasets.load_dataset("generated_reviews_enth")
+            else:
+                try:
+                    huggingface_name = f"kornwtp/{dataset_name}-tha-classification"
+                    self.datasets[dataset_name] = datasets.load_dataset(huggingface_name, trust_remote_code=True)
+                except:
+                    raise NotImplementedError
 
     def get_wisesight_dataset(self):
         dataset = self.datasets["wisesight"]
@@ -56,6 +79,25 @@ class TextClassificationBenchmark:
         y_test = dataset['test']['review_star']
         return X_train, y_train, X_val, y_val, X_test, y_test
 
+    def get_dataset(self, dataset_name):
+        dataset = self.datasets[dataset_name]
+        if "test" not in dataset.keys() and "validation" not in dataset.keys():
+            X_train = dataset['train']['texts']
+            y_train = dataset['train']['labels']
+            X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.30, random_state=42)
+        else:
+            X_train = dataset['train']['texts']
+            y_train = dataset['train']['labels']
+            
+            try:
+                X_test = dataset['test']['texts']
+                y_test = dataset['test']['labels']
+            except:
+                X_test = dataset['validation']['texts']
+                y_test = dataset['validation']['labels']
+
+        return X_train, y_train, X_test, y_test
+
     def __call__(
             self, 
             model: SentenceEncodingModel,
@@ -70,6 +112,11 @@ class TextClassificationBenchmark:
                 X_train, y_train, _, _, X_test, y_test = self.get_wongnai_dataset()
             elif dataset_name == "generated_reviews":
                 X_train, y_train, _, _, X_test, y_test = self.get_generated_reviews_dataset()
+            else:
+                try:
+                    X_train, y_train, X_test, y_test = self.get_dataset(dataset_name)
+                except:
+                    raise NotImplementedError
 
             # Train classification head
             train_embeds = model.encode(X_train, prompt=prompt, batch_size=batch_size, show_progress_bar=True)
