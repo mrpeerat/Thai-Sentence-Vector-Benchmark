@@ -46,7 +46,8 @@ results = benchmark(
     "retrieval": "Instruct: Given a web search query, retrieve relevant passages that answer the query\nQuery: ",
     "pair_classification": "Instruct: Retrieve parallel sentences.\nQuery: ",
     "text_classification": "Instruct: Classify the sentiment of the text.\nText: ",
-  }
+  },
+  batch_size=1, 
 )
 >> {
   "STS": {
